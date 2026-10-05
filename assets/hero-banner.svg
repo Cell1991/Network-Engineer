@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="100%">
+  <defs>
+    <!-- Color Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a0e" />
+      <stop offset="45%" stop-color="#0c1219" />
+      <stop offset="100%" stop-color="#05080c" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="nodeGlowEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nodeGlowAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Telemetry Circuit Grid -->
+    <pattern id="telemetryGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#13202c" stroke-width="0.8" stroke-opacity="0.7"/>
+      <circle cx="30" cy="0" r="1.2" fill="#10b981" fill-opacity="0.25"/>
+    </pattern>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-emerald" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-amber" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    
+    /* Flowing Packet Stream Keyframes */
+    @keyframes packetFlowForward {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes packetFlowBackward {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 200; }
+    }
+    @keyframes pulseLed {
+      0%, 100% { opacity: 0.2; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+    @keyframes radarSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes packetHop {
+      0% { offset-distance: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { offset-distance: 100%; opacity: 0; }
+    }
+    @keyframes metricPulse {
+      0%, 100% { fill: #10b981; }
+      50% { fill: #34d399; }
+    }
+
+    .flow-line-1 { stroke-dasharray: 8 16; animation: packetFlowForward 3s linear infinite; }
+    .flow-line-2 { stroke-dasharray: 6 12; animation: packetFlowBackward 2.5s linear infinite; }
+    .flow-line-3 { stroke-dasharray: 10 20; animation: packetFlowForward 4s linear infinite; }
+    .led-blink-1 { animation: pulseLed 1.4s ease-in-out infinite; transform-origin: center; }
+    .led-blink-2 { animation: pulseLed 1.9s ease-in-out infinite; transform-origin: center; }
+    .led-blink-3 { animation: pulseLed 0.8s ease-in-out infinite; transform-origin: center; }
+    .metric-live { animation: metricPulse 2s infinite ease-in-out; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="440" fill="url(#bgGrad)" />
+  <rect width="1200" height="440" fill="url(#telemetryGrid)" />
+
+  <!-- Background Ambient Glow Orbs -->
+  <circle cx="200" cy="120" r="180" fill="url(#nodeGlowEmerald)" />
+  <circle cx="1020" cy="320" r="220" fill="url(#nodeGlowAmber)" />
+  <circle cx="600" cy="220" r="200" fill="url(#nodeGlowEmerald)" opacity="0.4" />
+
+  <!-- TOP NOC STATUS BAR -->
+  <g transform="translate(40, 24)">
+    <rect width="1120" height="34" rx="6" fill="#0b131b" stroke="#1e2e3d" stroke-width="1.2"/>
+    
+    <!-- System Status Badges -->
+    <circle cx="20" cy="17" r="4.5" fill="#10b981" class="led-blink-3" filter="url(#glow-emerald)"/>
+    <text x="32" y="21" fill="#34d399" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">SYSTEM STATE: NOMINAL</text>
+    
+    <text x="240" y="21" fill="#64748b" class="font-mono" font-size="11">|</text>
+    <text x="260" y="21" fill="#94a3b8" class="font-mono" font-size="11">CORE FABRIC: <tspan fill="#f59e0b" font-weight="700">400G QSFP-DD</tspan></text>
+    
+    <text x="470" y="21" fill="#64748b" class="font-mono" font-size="11">|</text>
+    <text x="490" y="21" fill="#94a3b8" class="font-mono" font-size="11">BGP EVPN PEERS: <tspan fill="#10b981" font-weight="700">ESTABLISHED (32/32)</tspan></text>
+    
+    <text x="760" y="21" fill="#64748b" class="font-mono" font-size="11">|</text>
+    <text x="780" y="21" fill="#94a3b8" class="font-mono" font-size="11">LATENCY: <tspan fill="#34d399" font-weight="700">0.24ms</tspan></text>
+    <text x="920" y="21" fill="#64748b" class="font-mono" font-size="11">|</text>
+    <text x="940" y="21" fill="#94a3b8" class="font-mono" font-size="11">LOSS: <tspan fill="#10b981" font-weight="700">0.0000%</tspan></text>
+    
+    <circle cx="1090" cy="17" r="4.5" fill="#f59e0b" class="led-blink-1"/>
+  </g>
+
+  <!-- BACKGROUND FIBER BUS LINES & NODES -->
+  <g opacity="0.75">
+    <!-- Fiber links -->
+    <path d="M 80 180 L 280 180 L 400 290 L 680 290 L 820 160 L 1120 160" fill="none" stroke="#1e3a4a" stroke-width="2"/>
+    <path d="M 80 180 L 280 180 L 400 290 L 680 290 L 820 160 L 1120 160" fill="none" stroke="#10b981" stroke-width="2" class="flow-line-1" filter="url(#glow-emerald)"/>
+
+    <path d="M 120 360 L 320 360 L 480 210 L 760 210 L 920 340 L 1100 340" fill="none" stroke="#2a2e22" stroke-width="2"/>
+    <path d="M 120 360 L 320 360 L 480 210 L 760 210 L 920 340 L 1100 340" fill="none" stroke="#f59e0b" stroke-width="2" class="flow-line-2" filter="url(#glow-amber)"/>
+
+    <path d="M 280 180 L 480 210" fill="none" stroke="#155e75" stroke-width="1.5" stroke-dasharray="4 8" class="flow-line-3"/>
+    <path d="M 400 290 L 320 360" fill="none" stroke="#155e75" stroke-width="1.5" stroke-dasharray="4 8" class="flow-line-3"/>
+    <path d="M 680 290 L 760 210" fill="none" stroke="#155e75" stroke-width="1.5" stroke-dasharray="4 8" class="flow-line-3"/>
+    <path d="M 820 160 L 920 340" fill="none" stroke="#155e75" stroke-width="1.5" stroke-dasharray="4 8" class="flow-line-3"/>
+
+    <!-- Optical Mesh Switch Nodes -->
+    <!-- Node A -->
+    <g transform="translate(280, 180)">
+      <circle cx="0" cy="0" r="14" fill="#081018" stroke="#10b981" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#10b981" class="led-blink-1"/>
+      <text x="0" y="24" text-anchor="middle" fill="#64748b" class="font-mono" font-size="9">LEAF-01</text>
+    </g>
+    <!-- Node B -->
+    <g transform="translate(400, 290)">
+      <circle cx="0" cy="0" r="14" fill="#081018" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#f59e0b" class="led-blink-2"/>
+      <text x="0" y="24" text-anchor="middle" fill="#64748b" class="font-mono" font-size="9">SPINE-01</text>
+    </g>
+    <!-- Node C -->
+    <g transform="translate(680, 290)">
+      <circle cx="0" cy="0" r="14" fill="#081018" stroke="#10b981" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#10b981" class="led-blink-3"/>
+      <text x="0" y="24" text-anchor="middle" fill="#64748b" class="font-mono" font-size="9">SPINE-02</text>
+    </g>
+    <!-- Node D -->
+    <g transform="translate(820, 160)">
+      <circle cx="0" cy="0" r="14" fill="#081018" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#f59e0b" class="led-blink-1"/>
+      <text x="0" y="24" text-anchor="middle" fill="#64748b" class="font-mono" font-size="9">LEAF-02</text>
+    </g>
+  </g>
+
+  <!-- HERO CENTER CONTENT -->
+  <g transform="translate(600, 195)" text-anchor="middle">
+    <!-- Subtitle Badge -->
+    <rect x="-240" y="-86" width="480" height="26" rx="13" fill="#0a191f" stroke="#10b981" stroke-width="1.2"/>
+    <text x="0" y="-69" fill="#34d399" class="font-mono" font-size="11" font-weight="700" letter-spacing="2">
+      [ PROTOCOL ARCHITECTURE // PACKET TELEMETRY // NETDEVOPS ]
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="-12" fill="#ffffff" class="font-mono" font-size="34" font-weight="900" letter-spacing="1">
+      NETWORK ENGINEER COMPENDIUM
+    </text>
+
+    <!-- Gradient Accent Line -->
+    <rect x="-360" y="6" width="720" height="3" fill="url(#emeraldGrad)" rx="1.5"/>
+
+    <!-- High-Impact Description -->
+    <text x="0" y="36" fill="#cbd5e1" class="font-sans" font-size="14.5" font-weight="500" letter-spacing="0.3">
+      The Exhaustive Engineering Field Reference: From Optical Transceivers &amp; L2/L3 Fabrics
+    </text>
+    <text x="0" y="58" fill="#94a3b8" class="font-sans" font-size="13.5" font-weight="400">
+      to BGP-4 / EVPN, Segment Routing, TCP/IP State Machines, and NetDevOps Automation
+    </text>
+  </g>
+
+  <!-- BOTTOM METRICS & SPECS PANEL -->
+  <g transform="translate(60, 350)">
+    <!-- Metric 1: Tracks -->
+    <g transform="translate(0, 0)">
+      <rect width="240" height="62" rx="6" fill="#080f15" stroke="#1b2a36" stroke-width="1.2"/>
+      <rect width="4" height="62" rx="2" fill="#10b981"/>
+      <text x="18" y="24" fill="#64748b" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">CURRICULUM TRACKS</text>
+      <text x="18" y="48" fill="#f8fafc" class="font-mono" font-size="20" font-weight="800">13 DEEP MODULES</text>
+    </g>
+
+    <!-- Metric 2: Simulators -->
+    <g transform="translate(270, 0)">
+      <rect width="240" height="62" rx="6" fill="#080f15" stroke="#1b2a36" stroke-width="1.2"/>
+      <rect width="4" height="62" rx="2" fill="#f59e0b"/>
+      <text x="18" y="24" fill="#64748b" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">SIMULATION ENGINES</text>
+      <text x="18" y="48" fill="#f8fafc" class="font-mono" font-size="20" font-weight="800">SPF / BGP / STP</text>
+    </g>
+
+    <!-- Metric 3: Packet Crafter -->
+    <g transform="translate(540, 0)">
+      <rect width="240" height="62" rx="6" fill="#080f15" stroke="#1b2a36" stroke-width="1.2"/>
+      <rect width="4" height="62" rx="2" fill="#06b6d4"/>
+      <text x="18" y="24" fill="#64748b" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">PACKET DISSECTORS</text>
+      <text x="18" y="48" fill="#f8fafc" class="font-mono" font-size="20" font-weight="800">L2 - L7 RFC DECODER</text>
+    </g>
+
+    <!-- Metric 4: Test Coverage -->
+    <g transform="translate(810, 0)">
+      <rect width="270" height="62" rx="6" fill="#080f15" stroke="#1b2a36" stroke-width="1.2"/>
+      <rect width="4" height="62" rx="2" fill="#10b981"/>
+      <text x="18" y="24" fill="#64748b" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">TEST VALIDATION</text>
+      <text x="18" y="48" fill="#34d399" class="font-mono" font-size="20" font-weight="800">100% PYTEST VERIFIED</text>
+    </g>
+  </g>
+</svg>

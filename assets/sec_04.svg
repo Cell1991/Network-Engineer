@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="100%" height="80">
+  <defs>
+    <linearGradient id="secGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="60%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+    <pattern id="secGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#13202c" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="80" fill="#080c10" rx="8" stroke="#1e2e3d" stroke-width="1.2"/>
+  <rect width="1200" height="80" fill="url(#secGrid)" rx="8"/>
+  <rect x="0" y="0" width="8" height="80" fill="url(#secGrad4)" rx="4"/>
+  <g transform="translate(30, 48)">
+    <text fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="800" letter-spacing="2">[04]</text>
+    <text x="50" y="0" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="900" letter-spacing="1">PACKET FLOW &amp; PROTOCOL STATE ENGINES</text>
+    <text x="680" y="-2" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11">// TCP Handshakes &amp; BGP Best Path</text>
+  </g>
+</svg>
