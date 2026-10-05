@@ -1,286 +1,189 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%">
   <defs>
     <linearGradient id="bgBoxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a0e" />
-      <stop offset="100%" stop-color="#0f1722" />
+      <stop offset="0%" stop-color="#06090d" />
+      <stop offset="100%" stop-color="#0c1520" />
     </linearGradient>
 
     <linearGradient id="layer7Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer6Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f97316" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#f97316" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer5Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer4Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="layer1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.08"/>
     </linearGradient>
 
-    <pattern id="diagGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#13202c" stroke-width="0.6"/>
+    <pattern id="diagGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#132333" stroke-width="0.8"/>
     </pattern>
-
-    <filter id="diagGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <style>
     .font-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    
-    @keyframes pulseArrow {
-      0%, 100% { opacity: 0.3; transform: translateY(0); }
-      50% { opacity: 1; transform: translateY(6px); }
-    }
-    .encap-anim { animation: pulseArrow 2s infinite ease-in-out; }
   </style>
 
   <!-- Background -->
-  <rect width="1200" height="680" fill="url(#bgBoxGrad)" rx="10" stroke="#1e2e3d" stroke-width="1.5"/>
-  <rect width="1200" height="680" fill="url(#diagGrid)" rx="10"/>
+  <rect width="1200" height="720" fill="url(#bgBoxGrad)" rx="12" stroke="#1d3347" stroke-width="2"/>
+  <rect width="1200" height="720" fill="url(#diagGrid)" rx="12"/>
 
   <!-- Diagram Title Header -->
-  <g transform="translate(40, 36)">
-    <text fill="#10b981" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.5">[ REFERENCE BLUEPRINT // PROTOCOL STACKS ]</text>
-    <text y="24" fill="#ffffff" class="font-mono" font-size="20" font-weight="900">OSI 7-LAYER VS. TCP/IP 4-LAYER ARCHITECTURAL STACK</text>
+  <g transform="translate(40, 42)">
+    <text fill="#10b981" class="font-mono" font-size="15" font-weight="800" letter-spacing="2">[ PROTOCOL STACK ARCHITECTURAL MATRIX ]</text>
+    <text y="30" fill="#ffffff" class="font-mono" font-size="26" font-weight="900">OSI 7-LAYER VS. TCP/IP 4-LAYER INTERNET STACK</text>
   </g>
 
   <!-- Column 1: OSI 7 LAYERS -->
-  <g transform="translate(40, 80)">
-    <!-- Column Title -->
-    <rect width="420" height="34" rx="4" fill="#0c1824" stroke="#1e3a5f" stroke-width="1"/>
-    <text x="210" y="22" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="800">OSI 7-LAYER REFERENCE MODEL (ISO/IEC 7498-1)</text>
+  <g transform="translate(40, 95)">
+    <rect width="540" height="42" rx="6" fill="#0d1e2e" stroke="#1e3e5f" stroke-width="1.5"/>
+    <text x="270" y="27" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="15" font-weight="900">OSI 7-LAYER MODEL (ISO/IEC 7498-1)</text>
 
-    <!-- Layer 7: Application -->
-    <g transform="translate(0, 44)">
-      <rect width="420" height="64" rx="6" fill="url(#layer7Grad)" stroke="#ef4444" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#ef4444" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="16" font-weight="900">L7</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">APPLICATION</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">HTTP/3, HTTPS, DNS, BGP-4, SSH, SNMPv3, gNMI, NTP</text>
-      <text x="404" y="38" text-anchor="end" fill="#fca5a5" class="font-mono" font-size="10" font-weight="700">DATA</text>
+    <!-- Layer 7 -->
+    <g transform="translate(0, 52)">
+      <rect width="540" height="68" rx="8" fill="url(#layer7Grad)" stroke="#ef4444" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#ef4444" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="19" font-weight="900">L7</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">APPLICATION</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">HTTP/3, DNS, BGP-4, SSH, SNMPv3, gNMI, NTP</text>
+      <text x="520" y="42" text-anchor="end" fill="#fca5a5" class="font-mono" font-size="13" font-weight="900">DATA</text>
     </g>
 
-    <!-- Layer 6: Presentation -->
-    <g transform="translate(0, 116)">
-      <rect width="420" height="64" rx="6" fill="url(#layer6Grad)" stroke="#f97316" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#f97316" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#f97316" class="font-mono" font-size="16" font-weight="900">L6</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">PRESENTATION</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">TLS 1.3, SSL, JSON, YANG, Protobuf, ASN.1, ASCII</text>
-      <text x="404" y="38" text-anchor="end" fill="#fdba74" class="font-mono" font-size="10" font-weight="700">DATA</text>
+    <!-- Layer 6 -->
+    <g transform="translate(0, 128)">
+      <rect width="540" height="68" rx="8" fill="url(#layer6Grad)" stroke="#f97316" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#f97316" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#f97316" class="font-mono" font-size="19" font-weight="900">L6</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">PRESENTATION</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">TLS 1.3, JSON, YANG Data Models, Protobuf</text>
+      <text x="520" y="42" text-anchor="end" fill="#fdba74" class="font-mono" font-size="13" font-weight="900">DATA</text>
     </g>
 
-    <!-- Layer 5: Session -->
-    <g transform="translate(0, 188)">
-      <rect width="420" height="64" rx="6" fill="url(#layer5Grad)" stroke="#f59e0b" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="16" font-weight="900">L5</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">SESSION</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">Sockets, RPC, NetBIOS, PPTP, SOCKS5, gRPC Streams</text>
-      <text x="404" y="38" text-anchor="end" fill="#fcd34d" class="font-mono" font-size="10" font-weight="700">DATA</text>
+    <!-- Layer 5 -->
+    <g transform="translate(0, 204)">
+      <rect width="540" height="68" rx="8" fill="url(#layer5Grad)" stroke="#f59e0b" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#f59e0b" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="19" font-weight="900">L5</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">SESSION</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">Sockets, RPC, SOCKS5, gRPC BiDi Streams</text>
+      <text x="520" y="42" text-anchor="end" fill="#fcd34d" class="font-mono" font-size="13" font-weight="900">DATA</text>
     </g>
 
-    <!-- Layer 4: Transport -->
-    <g transform="translate(0, 260)">
-      <rect width="420" height="64" rx="6" fill="url(#layer4Grad)" stroke="#10b981" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#10b981" class="font-mono" font-size="16" font-weight="900">L4</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">TRANSPORT</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">TCP (Cubic/BBR, Flow/SACK), UDP, QUIC, SCTP</text>
-      <text x="404" y="38" text-anchor="end" fill="#86efac" class="font-mono" font-size="10" font-weight="700">SEGMENT</text>
+    <!-- Layer 4 -->
+    <g transform="translate(0, 280)">
+      <rect width="540" height="68" rx="8" fill="url(#layer4Grad)" stroke="#10b981" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#10b981" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#10b981" class="font-mono" font-size="19" font-weight="900">L4</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">TRANSPORT</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">TCP (Cubic/BBR, SACK), UDP, QUIC, SCTP</text>
+      <text x="520" y="42" text-anchor="end" fill="#86efac" class="font-mono" font-size="13" font-weight="900">SEGMENT</text>
     </g>
 
-    <!-- Layer 3: Network -->
-    <g transform="translate(0, 332)">
-      <rect width="420" height="64" rx="6" fill="url(#layer3Grad)" stroke="#06b6d4" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="16" font-weight="900">L3</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">NETWORK</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">IPv4, IPv6, OSPFv2/3, IS-IS, ICMP, IPsec ESP, VRF</text>
-      <text x="404" y="38" text-anchor="end" fill="#67e8f9" class="font-mono" font-size="10" font-weight="700">PACKET</text>
+    <!-- Layer 3 -->
+    <g transform="translate(0, 356)">
+      <rect width="540" height="68" rx="8" fill="url(#layer3Grad)" stroke="#06b6d4" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#06b6d4" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="19" font-weight="900">L3</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">NETWORK</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">IPv4, IPv6, OSPFv2/3, IS-IS, ICMP, IPsec, VRF</text>
+      <text x="520" y="42" text-anchor="end" fill="#67e8f9" class="font-mono" font-size="13" font-weight="900">PACKET</text>
     </g>
 
-    <!-- Layer 2: Data Link -->
-    <g transform="translate(0, 404)">
-      <rect width="420" height="64" rx="6" fill="url(#layer2Grad)" stroke="#3b82f6" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#3b82f6" class="font-mono" font-size="16" font-weight="900">L2</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">DATA LINK</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">Ethernet II (802.3), 802.1Q VLAN, STP/RSTP, LACP, ARP</text>
-      <text x="404" y="38" text-anchor="end" fill="#93c5fd" class="font-mono" font-size="10" font-weight="700">FRAME</text>
+    <!-- Layer 2 -->
+    <g transform="translate(0, 432)">
+      <rect width="540" height="68" rx="8" fill="url(#layer2Grad)" stroke="#3b82f6" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#3b82f6" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#3b82f6" class="font-mono" font-size="19" font-weight="900">L2</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">DATA LINK</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">Ethernet II (802.3), 802.1Q VLAN, STP, LACP, ARP</text>
+      <text x="520" y="42" text-anchor="end" fill="#93c5fd" class="font-mono" font-size="13" font-weight="900">FRAME</text>
     </g>
 
-    <!-- Layer 1: Physical -->
-    <g transform="translate(0, 476)">
-      <rect width="420" height="64" rx="6" fill="url(#layer1Grad)" stroke="#8b5cf6" stroke-width="1.2"/>
-      <rect width="48" height="64" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
-      <text x="24" y="38" text-anchor="middle" fill="#8b5cf6" class="font-mono" font-size="16" font-weight="900">L1</text>
-      <text x="64" y="26" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">PHYSICAL</text>
-      <text x="64" y="48" fill="#94a3b8" class="font-sans" font-size="11">100G/400G Single-Mode / Multi-Mode Fiber, Cat6A, PAM4</text>
-      <text x="404" y="38" text-anchor="end" fill="#c4b5fd" class="font-mono" font-size="10" font-weight="700">BITS</text>
-    </g>
-  </g>
-
-  <!-- ENCAPSULATION / DECAPSULATION CONNECTOR ARROWS -->
-  <g transform="translate(480, 80)">
-    <rect width="210" height="540" rx="6" fill="#080f15" stroke="#162634" stroke-width="1.2"/>
-    <text x="105" y="30" text-anchor="middle" fill="#10b981" class="font-mono" font-size="11" font-weight="800">ENCAPSULATION</text>
-    <text x="105" y="46" text-anchor="middle" fill="#64748b" class="font-mono" font-size="9">DOWN (TX PATH)</text>
-
-    <!-- Encapsulation Header Stack Diagram -->
-    <g transform="translate(20, 65)">
-      <!-- L7 Data -->
-      <rect width="170" height="32" rx="3" fill="#ef4444" fill-opacity="0.3" stroke="#ef4444" stroke-width="1"/>
-      <text x="85" y="20" text-anchor="middle" fill="#ffffff" class="font-mono" font-size="10">USER DATA / PAYLOAD</text>
-
-      <!-- Down Arrow -->
-      <path d="M 85 36 L 85 50 M 80 46 L 85 51 L 90 46" stroke="#f59e0b" stroke-width="1.8" fill="none" class="encap-anim"/>
-
-      <!-- L4 Segment -->
-      <g transform="translate(0, 56)">
-        <rect width="50" height="32" rx="3" fill="#10b981" fill-opacity="0.4" stroke="#10b981" stroke-width="1"/>
-        <text x="25" y="20" text-anchor="middle" fill="#34d399" class="font-mono" font-size="9">TCP/UDP</text>
-        <rect x="54" width="116" height="32" rx="3" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/>
-        <text x="112" y="20" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="9">PAYLOAD</text>
-      </g>
-
-      <!-- Down Arrow -->
-      <path d="M 85 92 L 85 106 M 80 102 L 85 107 L 90 102" stroke="#f59e0b" stroke-width="1.8" fill="none" class="encap-anim"/>
-
-      <!-- L3 Packet -->
-      <g transform="translate(0, 112)">
-        <rect width="45" height="32" rx="3" fill="#06b6d4" fill-opacity="0.4" stroke="#06b6d4" stroke-width="1"/>
-        <text x="22" y="20" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="9">IP HDR</text>
-        <rect x="48" width="40" height="32" rx="3" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="1"/>
-        <text x="68" y="20" text-anchor="middle" fill="#34d399" class="font-mono" font-size="9">TCP</text>
-        <rect x="91" width="79" height="32" rx="3" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/>
-        <text x="130" y="20" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="9">PAYLOAD</text>
-      </g>
-
-      <!-- Down Arrow -->
-      <path d="M 85 148 L 85 162 M 80 158 L 85 163 L 90 158" stroke="#f59e0b" stroke-width="1.8" fill="none" class="encap-anim"/>
-
-      <!-- L2 Frame -->
-      <g transform="translate(0, 168)">
-        <rect width="36" height="32" rx="3" fill="#3b82f6" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1"/>
-        <text x="18" y="20" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="8">ETH</text>
-        <rect x="38" width="30" height="32" rx="3" fill="#06b6d4" fill-opacity="0.3" stroke="#06b6d4" stroke-width="1"/>
-        <text x="53" y="20" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="8">IP</text>
-        <rect x="70" width="30" height="32" rx="3" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="1"/>
-        <text x="85" y="20" text-anchor="middle" fill="#34d399" class="font-mono" font-size="8">TCP</text>
-        <rect x="102" width="40" height="32" rx="3" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/>
-        <text x="122" y="20" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="8">DATA</text>
-        <rect x="144" width="26" height="32" rx="3" fill="#3b82f6" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1"/>
-        <text x="157" y="20" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="7">FCS</text>
-      </g>
-
-      <!-- Down Arrow -->
-      <path d="M 85 204 L 85 218 M 80 214 L 85 219 L 90 214" stroke="#f59e0b" stroke-width="1.8" fill="none" class="encap-anim"/>
-
-      <!-- L1 Bits Stream -->
-      <g transform="translate(0, 224)">
-        <rect width="170" height="32" rx="3" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1"/>
-        <text x="85" y="20" text-anchor="middle" fill="#c4b5fd" class="font-mono" font-size="10" font-weight="700">01001101 01100001...</text>
-      </g>
-    </g>
-
-    <!-- MTU & Overhead Breakdown -->
-    <g transform="translate(15, 360)">
-      <rect width="180" height="150" rx="4" fill="#0c141d" stroke="#1e2e3d" stroke-width="1"/>
-      <text x="10" y="22" fill="#f59e0b" class="font-mono" font-size="10" font-weight="800">TYPICAL OVERHEAD:</text>
-      <text x="10" y="44" fill="#cbd5e1" class="font-mono" font-size="9.5">ETH II HDR: <tspan fill="#38bdf8">14 Bytes</tspan></text>
-      <text x="10" y="62" fill="#cbd5e1" class="font-mono" font-size="9.5">802.1Q TAG: <tspan fill="#38bdf8">+4 Bytes</tspan></text>
-      <text x="10" y="80" fill="#cbd5e1" class="font-mono" font-size="9.5">IPv4 HDR: <tspan fill="#38bdf8">20 Bytes</tspan></text>
-      <text x="10" y="98" fill="#cbd5e1" class="font-mono" font-size="9.5">TCP HDR: <tspan fill="#38bdf8">20-60 Bytes</tspan></text>
-      <text x="10" y="116" fill="#cbd5e1" class="font-mono" font-size="9.5">ETH FCS: <tspan fill="#38bdf8">4 Bytes</tspan></text>
-      <text x="10" y="136" fill="#10b981" class="font-mono" font-size="9.5" font-weight="700">STD MTU: 1500 MSS: 1460</text>
+    <!-- Layer 1 -->
+    <g transform="translate(0, 508)">
+      <rect width="540" height="68" rx="8" fill="url(#layer1Grad)" stroke="#8b5cf6" stroke-width="1.8"/>
+      <rect width="58" height="68" rx="8" fill="#8b5cf6" fill-opacity="0.25"/>
+      <text x="29" y="42" text-anchor="middle" fill="#8b5cf6" class="font-mono" font-size="19" font-weight="900">L1</text>
+      <text x="76" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">PHYSICAL</text>
+      <text x="76" y="52" fill="#cbd5e1" class="font-sans" font-size="13">Single/Multi-Mode Fiber, PAM4 Laser, SFP28/QSFP-DD</text>
+      <text x="520" y="42" text-anchor="end" fill="#c4b5fd" class="font-mono" font-size="13" font-weight="900">BITS</text>
     </g>
   </g>
 
   <!-- Column 2: TCP/IP 4-LAYER MODEL -->
-  <g transform="translate(710, 80)">
-    <!-- Column Title -->
-    <rect width="450" height="34" rx="4" fill="#0c1824" stroke="#1e3a5f" stroke-width="1"/>
-    <text x="225" y="22" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="800">TCP/IP 4-LAYER INTERNET ARCHITECTURE (RFC 1122)</text>
+  <g transform="translate(620, 95)">
+    <rect width="540" height="42" rx="6" fill="#0d1e2e" stroke="#1e3e5f" stroke-width="1.5"/>
+    <text x="270" y="27" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="15" font-weight="900">TCP/IP 4-LAYER INTERNET ARCHITECTURE</text>
 
-    <!-- TCP/IP Layer 4: Application (Encompasses L7, L6, L5) -->
-    <g transform="translate(0, 44)">
-      <rect width="450" height="208" rx="6" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-width="1.5"/>
-      <rect width="52" height="208" rx="6" fill="#ef4444" fill-opacity="0.25"/>
-      <text x="26" y="110" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="15" font-weight="900" transform="rotate(-90 26 110)">L4 APPL</text>
+    <!-- TCP/IP Layer 4: Application (Encompassing L7, L6, L5) -->
+    <g transform="translate(0, 52)">
+      <rect width="540" height="220" rx="8" fill="#ef4444" fill-opacity="0.14" stroke="#ef4444" stroke-width="2"/>
+      <rect width="60" height="220" rx="8" fill="#ef4444" fill-opacity="0.28"/>
+      <text x="30" y="118" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="16" font-weight="900" transform="rotate(-90 30 118)">L4 APPL</text>
       
-      <text x="70" y="32" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">APPLICATION LAYER</text>
-      <text x="70" y="54" fill="#94a3b8" class="font-sans" font-size="11.5">Combines Session, Presentation, and Application functionalities.</text>
+      <text x="80" y="34" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">APPLICATION LAYER</text>
+      <text x="80" y="58" fill="#cbd5e1" class="font-sans" font-size="14">Encapsulates Session, Presentation, and Application services.</text>
       
-      <!-- Box with Key RFC Protocols -->
-      <g transform="translate(70, 68)">
-        <rect width="360" height="122" rx="4" fill="#0a1017" stroke="#253545" stroke-width="1"/>
-        <text x="14" y="24" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="700">WEB/API: <tspan fill="#e2e8f0">HTTP/1.1, HTTP/2 (RFC 7540), HTTP/3 (QUIC)</tspan></text>
-        <text x="14" y="46" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="700">ROUTING: <tspan fill="#e2e8f0">BGP-4 (Port 179), RIP (Port 520)</tspan></text>
-        <text x="14" y="68" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="700">RESOLVE: <tspan fill="#e2e8f0">DNS (Port 53), DHCP (Ports 67/68)</tspan></text>
-        <text x="14" y="90" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="700">TELEMETRY: <tspan fill="#e2e8f0">gNMI, RESTCONF (Port 443), SNMPv3 (161)</tspan></text>
-        <text x="14" y="110" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="700">SECURITY: <tspan fill="#e2e8f0">SSHv2 (Port 22), TLS 1.3 (RFC 8446)</tspan></text>
+      <g transform="translate(80, 72)">
+        <rect width="436" height="132" rx="6" fill="#09141f" stroke="#253b50" stroke-width="1.2"/>
+        <text x="16" y="26" fill="#fca5a5" class="font-mono" font-size="12.5" font-weight="800">WEB/API: <tspan fill="#ffffff">HTTP/1.1, HTTP/2, HTTP/3 (QUIC)</tspan></text>
+        <text x="16" y="50" fill="#fca5a5" class="font-mono" font-size="12.5" font-weight="800">ROUTING: <tspan fill="#ffffff">BGP-4 (Port 179), RIP (Port 520)</tspan></text>
+        <text x="16" y="74" fill="#fca5a5" class="font-mono" font-size="12.5" font-weight="800">RESOLVE: <tspan fill="#ffffff">DNS (Port 53), DHCP (Ports 67/68)</tspan></text>
+        <text x="16" y="98" fill="#fca5a5" class="font-mono" font-size="12.5" font-weight="800">TELEMETRY: <tspan fill="#ffffff">gNMI, RESTCONF (443), SNMPv3 (161)</tspan></text>
+        <text x="16" y="120" fill="#fca5a5" class="font-mono" font-size="12.5" font-weight="800">SECURITY: <tspan fill="#ffffff">SSHv2 (Port 22), TLS 1.3 (RFC 8446)</tspan></text>
       </g>
     </g>
 
     <!-- TCP/IP Layer 3: Transport -->
-    <g transform="translate(0, 260)">
-      <rect width="450" height="64" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5"/>
-      <rect width="52" height="64" rx="6" fill="#10b981" fill-opacity="0.25"/>
-      <text x="26" y="38" text-anchor="middle" fill="#10b981" class="font-mono" font-size="15" font-weight="900">L3</text>
-      <text x="70" y="26" fill="#ffffff" class="font-mono" font-size="14" font-weight="900">TRANSPORT LAYER (HOST-TO-HOST)</text>
-      <text x="70" y="48" fill="#94a3b8" class="font-sans" font-size="11">TCP (Reliable, byte-stream, congestion-controlled), UDP (Datagram)</text>
+    <g transform="translate(0, 280)">
+      <rect width="540" height="68" rx="8" fill="#10b981" fill-opacity="0.16" stroke="#10b981" stroke-width="2"/>
+      <rect width="60" height="68" rx="8" fill="#10b981" fill-opacity="0.28"/>
+      <text x="30" y="42" text-anchor="middle" fill="#10b981" class="font-mono" font-size="19" font-weight="900">L3</text>
+      <text x="80" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">TRANSPORT LAYER (HOST-TO-HOST)</text>
+      <text x="80" y="52" fill="#cbd5e1" class="font-sans" font-size="13.5">TCP (Reliable, byte-stream, BBR/CUBIC), UDP (Datagram)</text>
     </g>
 
     <!-- TCP/IP Layer 2: Internet -->
-    <g transform="translate(0, 332)">
-      <rect width="450" height="64" rx="6" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1.5"/>
-      <rect width="52" height="64" rx="6" fill="#06b6d4" fill-opacity="0.25"/>
-      <text x="26" y="38" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="15" font-weight="900">L2</text>
-      <text x="70" y="26" fill="#ffffff" class="font-mono" font-size="14" font-weight="900">INTERNET LAYER</text>
-      <text x="70" y="48" fill="#94a3b8" class="font-sans" font-size="11">IPv4 (RFC 791), IPv6 (RFC 8200), ICMPv4/v6, IGMP, IPsec</text>
+    <g transform="translate(0, 356)">
+      <rect width="540" height="68" rx="8" fill="#06b6d4" fill-opacity="0.16" stroke="#06b6d4" stroke-width="2"/>
+      <rect width="60" height="68" rx="8" fill="#06b6d4" fill-opacity="0.28"/>
+      <text x="30" y="42" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="19" font-weight="900">L2</text>
+      <text x="80" y="28" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">INTERNET LAYER</text>
+      <text x="80" y="52" fill="#cbd5e1" class="font-sans" font-size="13.5">IPv4 (RFC 791), IPv6 (RFC 8200), ICMPv4/v6, IGMP, IPsec</text>
     </g>
 
     <!-- TCP/IP Layer 1: Network Access / Link -->
-    <g transform="translate(0, 404)">
-      <rect width="450" height="136" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
-      <rect width="52" height="136" rx="6" fill="#3b82f6" fill-opacity="0.25"/>
-      <text x="26" y="74" text-anchor="middle" fill="#3b82f6" class="font-mono" font-size="15" font-weight="900" transform="rotate(-90 26 74)">L1 LINK</text>
-      <text x="70" y="30" fill="#ffffff" class="font-mono" font-size="14" font-weight="900">NETWORK ACCESS / LINK LAYER</text>
-      <text x="70" y="52" fill="#94a3b8" class="font-sans" font-size="11.5">Handles physical hardware interfacing, framing, and signal propagation.</text>
-      <g transform="translate(70, 64)">
-        <rect width="360" height="60" rx="4" fill="#0a1017" stroke="#253545" stroke-width="1"/>
-        <text x="14" y="22" fill="#93c5fd" class="font-mono" font-size="10.5" font-weight="700">PROTOCOLS: <tspan fill="#e2e8f0">Ethernet II, IEEE 802.1Q, 802.11 Wi-Fi, PPP</tspan></text>
-        <text x="14" y="44" fill="#93c5fd" class="font-mono" font-size="10.5" font-weight="700">HARDWARE: <tspan fill="#e2e8f0">ASIC PHYs, Transceivers (SFP28, QSFP-DD), DAC Cables</tspan></text>
+    <g transform="translate(0, 432)">
+      <rect width="540" height="144" rx="8" fill="#3b82f6" fill-opacity="0.16" stroke="#3b82f6" stroke-width="2"/>
+      <rect width="60" height="144" rx="8" fill="#3b82f6" fill-opacity="0.28"/>
+      <text x="30" y="78" text-anchor="middle" fill="#3b82f6" class="font-mono" font-size="16" font-weight="900" transform="rotate(-90 30 78)">L1 LINK</text>
+      <text x="80" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">NETWORK ACCESS / LINK LAYER</text>
+      <text x="80" y="56" fill="#cbd5e1" class="font-sans" font-size="13.5">Handles physical hardware interfacing, framing, and optical PHYs.</text>
+      <g transform="translate(80, 70)">
+        <rect width="436" height="62" rx="6" fill="#09141f" stroke="#253b50" stroke-width="1.2"/>
+        <text x="16" y="24" fill="#93c5fd" class="font-mono" font-size="12.5" font-weight="800">PROTOCOLS: <tspan fill="#ffffff">Ethernet II, IEEE 802.1Q, 802.11 Wi-Fi, LACP</tspan></text>
+        <text x="16" y="48" fill="#93c5fd" class="font-mono" font-size="12.5" font-weight="800">HARDWARE: <tspan fill="#ffffff">ASIC PHYs, Transceivers (SFP28, QSFP-DD), DACs</tspan></text>
       </g>
     </g>
-  </g>
-
-  <!-- Bottom Footer Status -->
-  <g transform="translate(40, 638)">
-    <rect width="1120" height="26" rx="4" fill="#0a121a" stroke="#16222f" stroke-width="1"/>
-    <text x="20" y="17" fill="#64748b" class="font-mono" font-size="10.5">STANDARDS: ISO/IEC 7498-1 | IETF RFC 1122 | IEEE 802.3 | IEEE 802.1Q | STRICT PROTOCOL ALIGNMENT</text>
-    <text x="1100" y="17" text-anchor="end" fill="#10b981" class="font-mono" font-size="10.5" font-weight="700">STATUS: VERIFIED</text>
   </g>
 </svg>

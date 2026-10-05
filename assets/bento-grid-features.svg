@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="100%">
   <defs>
     <linearGradient id="bentoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06090d"/>
       <stop offset="100%" stop-color="#0c141d"/>
     </linearGradient>
-    <pattern id="bentoGridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#13202c" stroke-width="0.5"/>
+    <pattern id="bentoGridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#132333" stroke-width="0.8"/>
     </pattern>
   </defs>
 
@@ -14,123 +14,123 @@
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
-  <rect width="1200" height="620" fill="url(#bentoBgGrad)" rx="10" stroke="#1e2e3d" stroke-width="1.5"/>
-  <rect width="1200" height="620" fill="url(#bentoGridPattern)" rx="10"/>
+  <rect width="1200" height="640" fill="url(#bentoBgGrad)" rx="10" stroke="#1d3347" stroke-width="2"/>
+  <rect width="1200" height="640" fill="url(#bentoGridPattern)" rx="10"/>
 
   <!-- Bento Grid Cards (3 cols x 2 rows) -->
-  <g transform="translate(40, 40)">
+  <g transform="translate(30, 30)">
     <!-- Card 1: Subnetting & CIDR Math Engine -->
     <g transform="translate(0, 0)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#10b981" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#34d399" class="font-mono" font-size="14" font-weight="900">[#1]</text>
+      <rect width="365" height="270" rx="8" fill="#08131d" stroke="#10b981" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#10b981" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#34d399" class="font-mono" font-size="18" font-weight="900">[1]</text>
       
-      <text x="64" y="36" fill="#10b981" class="font-mono" font-size="11" font-weight="700">CORE MODULE</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">VLSM &amp; CIDR CALCULATOR</text>
+      <text x="70" y="35" fill="#10b981" class="font-mono" font-size="13" font-weight="800">CORE MODULE</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">VLSM &amp; CIDR MATH</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">Bitwise IPv4/IPv6 address arithmetic engine:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· Optimal VLSM binary subnet partitioner</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· Supernetting / CIDR aggregation logic</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· IPv6 EUI-64 &amp; SLAAC generator</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">Bitwise address arithmetic:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· Optimal VLSM binary partitioning</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· Supernetting aggregation logic</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· IPv6 EUI-64 &amp; SLAAC generator</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#34d399" class="font-mono" font-size="10">&gt; python -m src.cli vlsm 10.0.0.0/24 50,30,10</text>
-      <text x="30" y="216" fill="#64748b" class="font-mono" font-size="10">Allocated: 3 subnets without fragmentation</text>
+      <rect x="18" y="195" width="329" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#34d399" class="font-mono" font-size="13" font-weight="700">&gt; python -m src.cli vlsm 10.0.0.0/24</text>
+      <text x="28" y="242" fill="#94a3b8" class="font-mono" font-size="12.5">Allocated: 4 subnets [Zero Waste]</text>
     </g>
 
     <!-- Card 2: Routing Protocols & Algorithms -->
-    <g transform="translate(380, 0)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#f59e0b" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="14" font-weight="900">[#2]</text>
+    <g transform="translate(385, 0)">
+      <rect width="365" height="270" rx="8" fill="#08131d" stroke="#f59e0b" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#f59e0b" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="18" font-weight="900">[2]</text>
       
-      <text x="64" y="36" fill="#f59e0b" class="font-mono" font-size="11" font-weight="700">ROUTING ENGINES</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">DIJKSTRA SPF &amp; BGP-4</text>
+      <text x="70" y="35" fill="#f59e0b" class="font-mono" font-size="13" font-weight="800">ROUTING ENGINES</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">DIJKSTRA SPF &amp; BGP</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">Graph-theoretic routing algorithmic core:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· Dijkstra OSPF SPF Shortest Path Tree</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· BGP 10-step Best Path Selection engine</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· Bellman-Ford Distance Vector simulator</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">Graph-theoretic routing core:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· Dijkstra OSPF SPF Shortest Path</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· BGP 10-step Best Path engine</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· Bellman-Ford Distance Vector</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#fbbf24" class="font-mono" font-size="10">&gt; python -m src.cli route-spf topology.json</text>
-      <text x="30" y="216" fill="#64748b" class="font-mono" font-size="10">Computed SPF Tree: Root R1 in 0.42ms</text>
+      <rect x="18" y="195" width="329" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#fbbf24" class="font-mono" font-size="13" font-weight="700">&gt; python -m src.cli bgp-sim</text>
+      <text x="28" y="242" fill="#94a3b8" class="font-mono" font-size="12.5">Winning Route: Next-Hop 198.51.100.2</text>
     </g>
 
     <!-- Card 3: IEEE 802 Switching & STP -->
-    <g transform="translate(760, 0)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#06b6d4" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="14" font-weight="900">[#3]</text>
+    <g transform="translate(770, 0)">
+      <rect width="370" height="270" rx="8" fill="#08131d" stroke="#06b6d4" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#06b6d4" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="18" font-weight="900">[3]</text>
       
-      <text x="64" y="36" fill="#06b6d4" class="font-mono" font-size="11" font-weight="700">L2 LAYER</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">STP &amp; MAC TABLE SIMULATOR</text>
+      <text x="70" y="35" fill="#06b6d4" class="font-mono" font-size="13" font-weight="800">L2 LAYER</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">STP &amp; MAC TABLES</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">Switching fabric &amp; loop prevention:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· IEEE 802.1D BPDU bridge root election</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· Root/Designated/Blocking port roles</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· Dynamic MAC learning &amp; frame flooding</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">Switching loop prevention:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· IEEE 802.1D BPDU root election</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· Root/Designated/Alternate roles</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· Dynamic MAC learning &amp; flooding</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#67e8f9" class="font-mono" font-size="10">&gt; python -m src.cli stp-sim</text>
-      <text x="30" y="216" fill="#64748b" class="font-mono" font-size="10">Root Bridge: SW-01 (Pri: 4096) [CONVERGED]</text>
+      <rect x="18" y="195" width="334" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#67e8f9" class="font-mono" font-size="13" font-weight="700">&gt; python -m src.cli stp-sim</text>
+      <text x="28" y="242" fill="#94a3b8" class="font-mono" font-size="12.5">Root: SW-01 (Pri 4096) [CONVERGED]</text>
     </g>
 
     <!-- Card 4: Bit-Accurate Packet Serialization -->
-    <g transform="translate(0, 270)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#3b82f6" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="14" font-weight="900">[#4]</text>
+    <g transform="translate(0, 290)">
+      <rect width="365" height="270" rx="8" fill="#08131d" stroke="#3b82f6" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#3b82f6" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="18" font-weight="900">[4]</text>
       
-      <text x="64" y="36" fill="#3b82f6" class="font-mono" font-size="11" font-weight="700">PACKET DISSECTOR</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">BINARY PACKET ENGINE</text>
+      <text x="70" y="35" fill="#3b82f6" class="font-mono" font-size="13" font-weight="800">PACKET DISSECTOR</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">BINARY PACKET ENGINE</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">RFC 791 / 793 / 1071 byte serialization:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· Ethernet II, 802.1Q, IPv4/IPv6, TCP, UDP</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· RFC 1071 16-bit One's Complement checksum</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· Full binary packet builder &amp; parser</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">RFC 791 / 793 byte serialization:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· Ethernet II, 802.1Q, IPv4/v6, TCP</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· RFC 1071 16-bit One's Complement</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· Raw binary builder &amp; dissector</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#93c5fd" class="font-mono" font-size="10">&gt; python -m src.cli packet-craft --proto tcp</text>
-      <text x="30" y="216" fill="#64748b" class="font-mono" font-size="10">Generated: 54-byte raw binary frame [OK]</text>
+      <rect x="18" y="195" width="329" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#93c5fd" class="font-mono" font-size="13" font-weight="700">&gt; python -m src.cli packet-craft</text>
+      <text x="28" y="242" fill="#94a3b8" class="font-mono" font-size="12.5">Generated: 54-byte Frame [OK]</text>
     </g>
 
     <!-- Card 5: NetDevOps & Automation -->
-    <g transform="translate(380, 270)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#8b5cf6" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#c4b5fd" class="font-mono" font-size="14" font-weight="900">[#5]</text>
+    <g transform="translate(385, 290)">
+      <rect width="365" height="270" rx="8" fill="#08131d" stroke="#8b5cf6" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#8b5cf6" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#c4b5fd" class="font-mono" font-size="18" font-weight="900">[5]</text>
       
-      <text x="64" y="36" fill="#8b5cf6" class="font-mono" font-size="11" font-weight="700">NETDEVOPS</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">AUTOMATION &amp; YANG DIFF</text>
+      <text x="70" y="35" fill="#8b5cf6" class="font-mono" font-size="13" font-weight="800">NETDEVOPS</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">CONFIG DIFF &amp; YANG</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">Modern programmatic infrastructure:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· Syntax-aware multi-vendor config differ</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· YANG data model JSON/RESTCONF serializer</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· Network config code generation templates</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">Programmatic infrastructure:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· Multi-vendor syntax-aware differ</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· YANG OpenConfig RESTCONF JSON</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· Cisco / Junos template engine</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#c4b5fd" class="font-mono" font-size="10">&gt; python -m src.automation.config_differ</text>
-      <text x="30" y="216" fill="#64748b" class="font-mono" font-size="10">Detected: 4 interface delta mutations</text>
+      <rect x="18" y="195" width="329" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#c4b5fd" class="font-mono" font-size="13" font-weight="700">&gt; python -m src.automation.diff</text>
+      <text x="28" y="242" fill="#94a3b8" class="font-mono" font-size="12.5">Detected: 4 interface mutations</text>
     </g>
 
-    <!-- Card 6: Exhaustive 13-Track Documentation & PyTest -->
-    <g transform="translate(760, 270)">
-      <rect width="360" height="250" rx="8" fill="#09131c" stroke="#10b981" stroke-width="1.2"/>
-      <rect x="20" y="20" width="34" height="34" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="37" y="42" text-anchor="middle" fill="#34d399" class="font-mono" font-size="14" font-weight="900">[#6]</text>
+    <!-- Card 6: 13 Tracks & PyTest -->
+    <g transform="translate(770, 290)">
+      <rect width="370" height="270" rx="8" fill="#08131d" stroke="#10b981" stroke-width="1.8"/>
+      <rect x="18" y="18" width="42" height="42" rx="6" fill="#10b981" fill-opacity="0.25"/>
+      <text x="39" y="45" text-anchor="middle" fill="#34d399" class="font-mono" font-size="18" font-weight="900">[6]</text>
       
-      <text x="64" y="36" fill="#10b981" class="font-mono" font-size="11" font-weight="700">RIGOROUS VERIFICATION</text>
-      <text x="64" y="52" fill="#ffffff" class="font-mono" font-size="14" font-weight="800">13 TRACKS &amp; 100% PYTEST</text>
+      <text x="70" y="35" fill="#10b981" class="font-mono" font-size="13" font-weight="800">VERIFICATION</text>
+      <text x="70" y="55" fill="#ffffff" class="font-mono" font-size="17" font-weight="900">13 TRACKS &amp; PYTEST</text>
       
-      <text x="20" y="85" fill="#cbd5e1" class="font-sans" font-size="12">Production-grade theoretical &amp; lab vault:</text>
-      <text x="20" y="105" fill="#94a3b8" class="font-mono" font-size="10.5">· 13 deep, comprehensive technical tracks</text>
-      <text x="20" y="125" fill="#94a3b8" class="font-mono" font-size="10.5">· RFC-compliant packet parsing tests</text>
-      <text x="20" y="145" fill="#94a3b8" class="font-mono" font-size="10.5">· Zero external dependencies, pure Python 3.12</text>
+      <text x="18" y="95" fill="#cbd5e1" class="font-sans" font-size="15" font-weight="600">Theoretical &amp; lab vault:</text>
+      <text x="18" y="122" fill="#94a3b8" class="font-mono" font-size="14">· 13 exhaustive technical tracks</text>
+      <text x="18" y="146" fill="#94a3b8" class="font-mono" font-size="14">· RFC conformance test suite</text>
+      <text x="18" y="170" fill="#94a3b8" class="font-mono" font-size="14">· Zero external dependencies</text>
       
-      <rect x="20" y="175" width="320" height="55" rx="4" fill="#050a0f" stroke="#182c3c" stroke-width="1"/>
-      <text x="30" y="196" fill="#34d399" class="font-mono" font-size="10">&gt; pytest -v</text>
-      <text x="30" y="216" fill="#34d399" class="font-mono" font-size="10">==== 100% Passed (All tests green) ====</text>
+      <rect x="18" y="195" width="334" height="58" rx="6" fill="#050a0f" stroke="#182c3c" stroke-width="1.2"/>
+      <text x="28" y="220" fill="#34d399" class="font-mono" font-size="13" font-weight="700">&gt; pytest -v</text>
+      <text x="28" y="242" fill="#34d399" class="font-mono" font-size="12.5">100% Passed (25/25 Green)</text>
     </g>
   </g>
 </svg>

@@ -4,7 +4,7 @@
 
 <div align="center">
 
-  <!-- Self-Hosted High-Resolution Animated SVG Banner (Obsidian & Photonic Emerald/Amber NOC Theme) -->
+  <!-- Responsive Animated High-Resolution SVG Banner -->
   <a href="https://github.com/Cell1991/Network-Engineer">
     <img src="./assets/hero-banner.svg" alt="Network Engineering Encyclopedia Hero Banner" width="100%" />
   </a>
@@ -13,12 +13,12 @@
 
   <!-- Responsive Terminal Typing Stream -->
   <a href="https://github.com/Cell1991/Network-Engineer">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&pause=1200&color=10B981&center=true&vCenter=true&width=780&height=40&lines=%24+net.init()+--curriculum+%22Complete+Network+Engineer+Compendium%22;%24+bgp.select()+--algorithm+%2210-Step+Deterministic+Best+Path%22;%24+stp.converge()+--standard+%22IEEE+802.1D+%2F+802.1w+Rapid-STP%22;%24+packet.craft()+--engine+%22Bit-Accurate+RFC+791+%2F+793+Serializer%22;%24+pytest.run()+--status+%22100%25+Verified+RFC+Compliance+Passed%22" width="100%" alt="Network Terminal Typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=16&pause=1200&color=10B981&center=true&vCenter=true&width=650&height=44&lines=%24+net.init()+--curriculum+%22Complete+Network+Compendium%22;%24+bgp.select()+--algorithm+%2210-Step+Best+Path%22;%24+stp.converge()+--standard+%22IEEE+802.1w+Rapid-STP%22;%24+packet.craft()+--engine+%22Bit-Accurate+RFC+Serializer%22;%24+pytest.run()+--status+%22100%25+Verified+RFC+Tests+Passed%22" width="100%" alt="Network Terminal Typing" />
   </a>
 
   <br/>
 
-  <!-- SYSTEM TELEMETRY BADGES (Zero Emojis) -->
+  <!-- TELEMETRY STATUS BADGES (Zero Emojis) -->
   <p align="center">
     <img src="https://img.shields.io/badge/Protocols-50+_RFC_Standards-10b981?style=flat-square&logo=cisco&logoColor=white" alt="Protocols" />
     <img src="https://img.shields.io/badge/Tracks-13_Specialized_Modules-06b6d4?style=flat-square&logo=gitbook&logoColor=white" alt="Curriculum Tracks" />
@@ -34,34 +34,40 @@
 
   <br/><br/>
 
-  <!-- TACTICAL NAVIGATION RADAR & SITEMAP MATRIX -->
+  <!-- MOBILE-OPTIMIZED TACTICAL NAVIGATION -->
   <p align="center">
     <a href="#01-taxonomic-curriculum-matrix">
-      <img src="https://img.shields.io/badge/01_TAXONOMY-Curriculum_Matrix-059669?style=flat-square&logo=blueprint&logoColor=white" alt="Taxonomy Matrix" />
+      <img src="https://img.shields.io/badge/01_TAXONOMY-Curriculum_Matrix-059669?style=flat-square" alt="Taxonomy Matrix" />
     </a>
+    &nbsp;
     <a href="#02-bento-grid-feature-highlights">
-      <img src="https://img.shields.io/badge/02_BENTO_GRID-Engineering_Pillars-d97706?style=flat-square&logo=grid&logoColor=white" alt="Bento Grid" />
+      <img src="https://img.shields.io/badge/02_BENTO_GRID-Engineering_Pillars-d97706?style=flat-square" alt="Bento Grid" />
     </a>
+    &nbsp;
     <a href="#03-osi-7-layer-vs-tcpip-model">
-      <img src="https://img.shields.io/badge/03_BLUEPRINTS-OSI_&_TCP_IP_Stack-0891b2?style=flat-square&logo=speedtest&logoColor=white" alt="OSI Blueprint" />
-    </a>
-    <a href="#04-packet-flow--protocol-dynamics">
-      <img src="https://img.shields.io/badge/04_DYNAMICS-Packet_Flow_&_BGP_Engine-7c3aed?style=flat-square&logo=readme&logoColor=white" alt="Packet Dynamics" />
+      <img src="https://img.shields.io/badge/03_BLUEPRINTS-OSI_&_TCP_IP-0891b2?style=flat-square" alt="OSI Blueprint" />
     </a>
   </p>
-
   <p align="center">
+    <a href="#04-packet-flow--protocol-dynamics">
+      <img src="https://img.shields.io/badge/04_DYNAMICS-Packet_Flow_&_BGP-7c3aed?style=flat-square" alt="Packet Dynamics" />
+    </a>
+    &nbsp;
     <a href="#05-exhaustive-chapter-catalogue">
-      <img src="https://img.shields.io/badge/05_CHAPTERS-Comprehensive_Vault-ea580c?style=flat-square&logo=bookstack&logoColor=white" alt="Chapter Vault" />
+      <img src="https://img.shields.io/badge/05_CHAPTERS-Curriculum_Vault-ea580c?style=flat-square" alt="Chapter Vault" />
     </a>
+    &nbsp;
     <a href="#06-repository-architecture--code-tree">
-      <img src="https://img.shields.io/badge/06_CODE_TREE-Monorepo_Layout-dc2626?style=flat-square&logo=files&logoColor=white" alt="Code Tree" />
+      <img src="https://img.shields.io/badge/06_CODE_TREE-Monorepo_Layout-dc2626?style=flat-square" alt="Code Tree" />
     </a>
+  </p>
+  <p align="center">
     <a href="#07-interactive-cli-suite">
-      <img src="https://img.shields.io/badge/07_CLI_TOOLS-Simulation_Engines-10b981?style=flat-square&logo=terminal&logoColor=white" alt="CLI Tools" />
+      <img src="https://img.shields.io/badge/07_CLI_TOOLS-Simulation_Engines-10b981?style=flat-square" alt="CLI Tools" />
     </a>
+    &nbsp;
     <a href="#08-verification-matrix--pytest-suite">
-      <img src="https://img.shields.io/badge/08_TESTS-100%25_PyTest_Passed-2563eb?style=flat-square&logo=pytest&logoColor=white" alt="Verification" />
+      <img src="https://img.shields.io/badge/08_TESTS-100%25_PyTest_Passed-2563eb?style=flat-square" alt="Verification" />
     </a>
   </p>
 
@@ -84,21 +90,21 @@
 
 ### Curriculum Matrix Breakdown
 
-| Track ID | Track Classification | Theoretical Foundation | Operational &amp; Engineering Artifacts | Documentation Link |
-| :--- | :--- | :--- | :--- | :--- |
-| **Track 01** | Physical Layer &amp; Optics | Nyquist-Shannon bounds, Single/Multi-mode dispersion, Link Budget calculations | SFP28/QSFP-DD optics, DOM telemetry, Cat6A/8 structured cabling | [`docs/01_physical_and_transmission.md`](./docs/01_physical_and_transmission.md) |
-| **Track 02** | Data Link &amp; Switching | IEEE 802.3 Ethernet framing, 802.1Q tagging, 802.1D/w/s STP convergence | Dynamic MAC CAM learning, LACP bundling, VXLAN overlays | [`docs/02_data_link_and_switching.md`](./docs/02_data_link_and_switching.md) |
-| **Track 03** | Network Layer &amp; IP | RFC 791 / RFC 8200 headers, Binary CIDR arithmetic, EUI-64 derivation | VLSM subnet planners, Supernetting aggregators, NAT/PAT engines | [`docs/03_network_layer_and_ip_addressing.md`](./docs/03_network_layer_and_ip_addressing.md) |
-| **Track 04** | Routing Protocols | Dijkstra Link-State SPF, BGP Path Vector selection, PIM-SM Multicast | OSPFv2/v3 Area hierarchy, BGP-4 Best Path engine, Radix LPM FIB | [`docs/04_routing_protocols_and_architectures.md`](./docs/04_routing_protocols_and_architectures.md) |
-| **Track 05** | Transport Layer | RFC 9293 TCP state dynamics, Sliding Window flow control, QUIC 0-RTT | TCP BBR / CUBIC congestion engines, SACK loss recovery | [`docs/05_transport_layer_and_traffic_control.md`](./docs/05_transport_layer_and_traffic_control.md) |
-| **Track 06** | Application Services | Distributed DNS resolution hierarchies, DHCP DORA, TLS 1.3 1-RTT | DNSSEC, DHCP Option 82 Relay, SNMPv3 USM auth/priv | [`docs/06_application_and_core_services.md`](./docs/06_application_and_core_services.md) |
-| **Track 07** | Campus &amp; Data Center | Cisco 3-Tier Enterprise vs. 2-Tier Clos Spine-Leaf architectures | ECMP 64-way fabric, HSRP/VRRP gateways, Wi-Fi 6/7 OFDMA/MLO | [`docs/07_enterprise_campus_and_datacenter.md`](./docs/07_enterprise_campus_and_datacenter.md) |
-| **Track 08** | Service Provider &amp; WAN | MPLS label swapping, L3VPN VRF/RD/RT, Segment Routing (SRv6) | TI-LFA 50ms Fast Reroute, SD-WAN Application-Aware Routing | [`docs/08_service_provider_and_wan.md`](./docs/08_service_provider_and_wan.md) |
-| **Track 09** | Network Security | Stateful inspection vs NGFW, IPsec IKEv1/IKEv2 ESP, 802.1X EAP-TLS | Zero Trust Architecture (ZTA), Microsegmentation, MACsec | [`docs/09_network_security_and_zero_trust.md`](./docs/09_network_security_and_zero_trust.md) |
-| **Track 10** | NetDevOps Programmability | Model-driven telemetry, NETCONF/RESTCONF, OpenConfig YANG models | Python Netmiko/Scapy scripts, GitOps CI/CD pre-flight pipelines | [`docs/10_network_automation_and_programmability.md`](./docs/10_network_automation_and_programmability.md) |
-| **Track 11** | Telemetry &amp; Diagnostics | Push telemetry (gNMI/gRPC) vs Pull SNMP, NetFlow v9 / IPFIX | Systematic OSI L1-L7 diagnostics, MTU/MSS blackhole detection | [`docs/11_telemetry_monitoring_and_troubleshooting.md`](./docs/11_telemetry_monitoring_and_troubleshooting.md) |
-| **Track 12** | Cloud Interconnects | AWS VPC / Azure VNet overlays, Transit Gateway (TGW) routing | Direct Connect / ExpressRoute redundant 100G BGP peering | [`docs/12_cloud_networking_and_hybrid_architectures.md`](./docs/12_cloud_networking_and_hybrid_architectures.md) |
-| **Track 13** | Industrial &amp; HPC Networks | IEEE 1588 PTP nanosecond sync, RoCEv2 Lossless Ethernet (PFC/ECN) | SCADA Modbus TCP, PROFINET RT/IRT, High-Frequency Trading | [`docs/13_industrial_and_high_performance_networking.md`](./docs/13_industrial_and_high_performance_networking.md) |
+| Track ID | Specialized Technical Domain | Architecture Field Guide |
+| :--- | :--- | :--- |
+| **Track 01** | **Physical Layer &amp; Optics**<br/>• Nyquist-Shannon bounds, SMF/MMF dispersion, Link Budget<br/>• SFP28/QSFP-DD/OSFP, DOM telemetry, Cat6A/8 structured cabling | [`docs/01_physical_and_transmission.md`](./docs/01_physical_and_transmission.md) |
+| **Track 02** | **Data Link &amp; Switching**<br/>• IEEE 802.3 Ethernet, 802.1Q tagging, QinQ, 802.1D/w/s STP<br/>• Dynamic MAC CAM learning, LACP bundling, VXLAN VNI overlays | [`docs/02_data_link_and_switching.md`](./docs/02_data_link_and_switching.md) |
+| **Track 03** | **Network Layer &amp; IP Addressing**<br/>• RFC 791 IPv4 &amp; RFC 8200 IPv6, Binary CIDR arithmetic<br/>• Optimal VLSM partitioning, Supernetting, EUI-64 SLAAC, NAT/PAT | [`docs/03_network_layer_and_ip_addressing.md`](./docs/03_network_layer_and_ip_addressing.md) |
+| **Track 04** | **Routing Protocols &amp; Graph Engines**<br/>• Dijkstra Link-State SPF, OSPFv2/v3 Area hierarchy<br/>• BGP-4 10-Step Best Path decision engine, Radix Trie LPM, PIM Multicast | [`docs/04_routing_protocols_and_architectures.md`](./docs/04_routing_protocols_and_architectures.md) |
+| **Track 05** | **Transport Layer &amp; Traffic Control**<br/>• RFC 9293 TCP 11-State FSM, Sliding Window, SACK loss recovery<br/>• TCP BBR &amp; CUBIC congestion engines, QUIC 0-RTT, HTTP/3 | [`docs/05_transport_layer_and_traffic_control.md`](./docs/05_transport_layer_and_traffic_control.md) |
+| **Track 06** | **Application Services &amp; Infrastructure**<br/>• DNS iterative resolution trees, DHCP 4-Way DORA &amp; Option 82 Relay<br/>• TLS 1.3 cryptographic 1-RTT handshake, SNMPv3 USM (authPriv) | [`docs/06_application_and_core_services.md`](./docs/06_application_and_core_services.md) |
+| **Track 07** | **Enterprise Campus &amp; Data Center**<br/>• Cisco 3-Tier Enterprise vs. 2-Tier Clos Spine-Leaf fabrics<br/>• Non-blocking ECMP 64-way routing, FHRP (HSRP/VRRP), Wi-Fi 6/7 MLO | [`docs/07_enterprise_campus_and_datacenter.md`](./docs/07_enterprise_campus_and_datacenter.md) |
+| **Track 08** | **Service Provider &amp; WAN Overlays**<br/>• MPLS label swapping, L3VPN (VRF, RD, RT), Segment Routing (SRv6)<br/>• TI-LFA 50ms Fast Reroute, SD-WAN Application-Aware Routing | [`docs/08_service_provider_and_wan.md`](./docs/08_service_provider_and_wan.md) |
+| **Track 09** | **Network Security &amp; Zero Trust**<br/>• Stateful vs NGFW App-ID inspection, IPsec IKEv2 ESP tunnel mode<br/>• IEEE 802.1X EAP-TLS, NIST SP 800-207 Zero Trust, Microsegmentation | [`docs/09_network_security_and_zero_trust.md`](./docs/09_network_security_and_zero_trust.md) |
+| **Track 10** | **NetDevOps Automation &amp; YANG**<br/>• NETCONF (SSH 830) / RESTCONF (HTTPS 443), OpenConfig YANG<br/>• Multi-vendor Python Netmiko/Scapy, GitOps CI/CD pre-flight pipelines | [`docs/10_network_automation_and_programmability.md`](./docs/10_network_automation_and_programmability.md) |
+| **Track 11** | **Observability &amp; Troubleshooting**<br/>• Streaming telemetry (gNMI/gRPC) vs SNMP, NetFlow v9 / IPFIX<br/>• Systematic OSI L1-L7 diagnostics runbooks, Path MTU Discovery fixes | [`docs/11_telemetry_monitoring_and_troubleshooting.md`](./docs/11_telemetry_monitoring_and_troubleshooting.md) |
+| **Track 12** | **Cloud Networking &amp; Interconnects**<br/>• AWS VPC / Azure VNet overlays, Transit Gateway (TGW) routing<br/>• Direct Connect / ExpressRoute redundant 100G BGP peering | [`docs/12_cloud_networking_and_hybrid_architectures.md`](./docs/12_cloud_networking_and_hybrid_architectures.md) |
+| **Track 13** | **Industrial &amp; HPC Networks**<br/>• RoCEv2 Lossless Ethernet (PFC/ECN) vs InfiniBand, IEEE 1588 PTP<br/>• SCADA Modbus TCP, PROFINET RT/IRT, High-Frequency Trading | [`docs/13_industrial_and_high_performance_networking.md`](./docs/13_industrial_and_high_performance_networking.md) |
 
 <br/>
 
@@ -117,11 +123,11 @@
 
 <br/>
 
-| Architectural Pillar | Theoretical Foundation | Engineering Implementation &amp; Operational Guarantee |
-| :--- | :--- | :--- |
-| **Mathematical Precision** | Rigorous 32-bit/128-bit bitwise arithmetic, Dijkstra graph shortest paths, Bellman-Ford distance vectors. | Zero-fragmentation VLSM subnet allocator and Trie-based Longest Prefix Match (LPM) FIB engine. |
-| **Bit-Level Serialization** | RFC 791, 793, 8200, and 1071 byte packing and 16-bit One's Complement internet checksum calculation. | Pure binary packet builder and dissector capable of inspecting raw Ethernet II, 802.1Q, IPv4, TCP, UDP, and ICMP frames. |
-| **Zero-Dependency Architecture** | Clean, idiomatic, fully type-annotated Python 3.12 utilizing standard library primitives. | Maximizes portability, sandbox compatibility, and execution speed without external bloat. |
+| Architectural Pillar | Engineering Guarantee &amp; Mathematical Rigor |
+| :--- | :--- |
+| **Mathematical Precision** | Rigorous 32-bit/128-bit bitwise arithmetic, Dijkstra graph shortest paths, Bellman-Ford distance vectors. Zero-fragmentation VLSM subnet allocator and Trie-based Longest Prefix Match (LPM) FIB engine. |
+| **Bit-Level Serialization** | RFC 791, 793, 8200, and 1071 byte packing and 16-bit One's Complement internet checksum calculation. Pure binary packet builder and dissector inspecting raw Ethernet II, 802.1Q, IPv4, TCP, UDP, and ICMP frames. |
+| **Zero-Dependency Core** | Clean, idiomatic, fully type-annotated Python 3.12 utilizing standard library primitives. Maximizes portability, sandbox compatibility, and execution speed without external bloat. |
 
 <br/>
 
@@ -285,36 +291,12 @@ Network-Engineer/
 │   └── 13_industrial_and_high_performance_networking.md# RoCEv2, IEEE 1588 PTP & Modbus TCP
 ├── src/                                         # Production-Grade Algorithmic Source Code
 │   ├── automation/                              # NetDevOps & Automation Engines
-│   │   ├── config_differ.py                     # Hierarchical Multi-Vendor Config Differ
-│   │   ├── template_engine.py                   # Cisco / Junos / EOS Configuration Generator
-│   │   └── yang_parser.py                       # YANG Model RESTCONF JSON Serializer
 │   ├── packets/                                 # Bit-Accurate Packet Dissectors & Builders
-│   │   ├── checksum.py                          # RFC 1071 16-bit Internet Checksum Algorithm
-│   │   ├── frame.py                             # Ethernet II & 802.1Q Frame Serializer
-│   │   ├── icmp.py                              # ICMP Echo Request / Reply Packet Crafter
-│   │   ├── ipv4.py                              # IPv4 Packet Header Dissector with Options
-│   │   ├── ipv6.py                              # IPv6 Fixed 40-byte Packet Dissector
-│   │   ├── tcp.py                               # TCP Segment with Pseudo-Header Checksum & FSM
-│   │   └── udp.py                               # UDP Datagram Builder & Dissector
-│   ├── routing/                                 # Algorithmic Routing Engines
-│   │   ├── bellman_ford_rip.py                  # Distance-Vector RIPv2 with Split Horizon
-│   │   ├── bgp_engine.py                        # BGP-4 10-Step Deterministic Path Selector
-│   │   ├── dijkstra_ospf.py                     # Link-State OSPF Dijkstra Shortest Path First
-│   │   └── routing_table.py                     # Binary Radix Trie Longest Prefix Match (LPM)
-│   ├── subnetting/                              # Bitwise Subnetting & Address Math
-│   │   ├── calculator.py                        # IPv4 CIDR, Netmask, Host Range & Classful
-│   │   ├── ipv6_tools.py                        # IPv6 RFC 5952 Compression & EUI-64 SLAAC
-│   │   ├── supernet.py                          # CIDR Route Aggregation / Summarizer
-│   │   └── vlsm.py                              # Optimal Non-Overlapping VLSM Partitioning
+│   ├── routing/                                 # Algorithmic Routing Engines (Dijkstra/BGP)
+│   ├── subnetting/                              # Bitwise Subnetting & Address Math (VLSM)
 │   ├── cli.py                                   # Unified Interactive Terminal CLI Suite
 │   └── __init__.py
 ├── tests/                                       # 100% PyTest Verification Test Suite
-│   ├── test_automation.py                       # Config Differ & Template Rendering Tests
-│   ├── test_packets.py                          # Checksums, Ethernet, IPv4, TCP & ICMP Tests
-│   ├── test_routing.py                          # Dijkstra SPF, BGP Decision & Radix LPM Tests
-│   ├── test_subnetting.py                       # Subnet Math & RFC 1918 Classification Tests
-│   ├── test_switching.py                        # MAC Learning, STP Convergence & VLAN Tests
-│   └── test_vlsm.py                             # VLSM Allocator & IPv6 EUI-64 SLAAC Tests
 ├── .gitignore                                   # Monorepo Git Ignore Rules
 ├── LICENSE                                      # MIT Open Source License
 ├── pyproject.toml                               # PEP 621 Standard Package Configuration

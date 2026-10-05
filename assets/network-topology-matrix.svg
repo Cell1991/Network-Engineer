@@ -1,16 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="100%">
   <defs>
     <linearGradient id="topoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06090d"/>
-      <stop offset="100%" stop-color="#0d141e"/>
+      <stop offset="100%" stop-color="#0c1520"/>
     </linearGradient>
-    <pattern id="topoGrid" width="25" height="25" patternUnits="userSpaceOnUse">
-      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#13202c" stroke-width="0.6"/>
+    <pattern id="topoGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#132333" stroke-width="0.8"/>
     </pattern>
-    <filter id="topoGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
   </defs>
 
   <style>
@@ -21,134 +17,125 @@
       0% { stroke-dashoffset: 40; }
       100% { stroke-dashoffset: 0; }
     }
-    .topo-flow-1 { stroke-dasharray: 4 6; animation: spineLeafFlow 2s linear infinite; }
-    .topo-flow-2 { stroke-dasharray: 4 6; animation: spineLeafFlow 2.5s linear infinite; }
+    .topo-flow-1 { stroke-dasharray: 6 8; animation: spineLeafFlow 2s linear infinite; }
+    .topo-flow-2 { stroke-dasharray: 6 8; animation: spineLeafFlow 2.5s linear infinite; }
   </style>
 
-  <rect width="1200" height="600" fill="url(#topoBgGrad)" rx="10" stroke="#1e2e3d" stroke-width="1.5"/>
-  <rect width="1200" height="600" fill="url(#topoGrid)" rx="10"/>
+  <rect width="1200" height="640" fill="url(#topoBgGrad)" rx="12" stroke="#1d3347" stroke-width="2"/>
+  <rect width="1200" height="640" fill="url(#topoGrid)" rx="12"/>
 
   <!-- Title Header -->
-  <g transform="translate(40, 36)">
-    <text fill="#10b981" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.5">[ TOPOLOGY COMPARATIVE ARCHITECTURE ]</text>
-    <text y="24" fill="#ffffff" class="font-mono" font-size="20" font-weight="900">DATA CENTER CLOS (SPINE-LEAF) VS. ENTERPRISE 3-TIER HIERARCHY</text>
+  <g transform="translate(40, 42)">
+    <text fill="#10b981" class="font-mono" font-size="15" font-weight="800" letter-spacing="2">[ TOPOLOGY ARCHITECTURAL PATTERNS ]</text>
+    <text y="30" fill="#ffffff" class="font-mono" font-size="26" font-weight="900">DATA CENTER CLOS (SPINE-LEAF) VS. ENTERPRISE 3-TIER</text>
   </g>
 
-  <!-- Left: 2-Tier Clos Spine-Leaf (East-West Optimized) -->
-  <g transform="translate(40, 80)">
-    <rect width="540" height="490" rx="8" fill="#09121a" stroke="#1b3040" stroke-width="1.2"/>
-    <text x="20" y="30" fill="#10b981" class="font-mono" font-size="12.5" font-weight="800">DATA CENTER: 2-TIER CLOS / SPINE-LEAF</text>
-    <text x="20" y="48" fill="#64748b" class="font-mono" font-size="10">Non-blocking ECMP Fabric | East-West Latency Guaranteed (1 Hop)</text>
+  <!-- Left: 2-Tier Clos Spine-Leaf -->
+  <g transform="translate(40, 95)">
+    <rect width="540" height="515" rx="10" fill="#08121a" stroke="#1c3347" stroke-width="1.8"/>
+    <text x="24" y="34" fill="#10b981" class="font-mono" font-size="15" font-weight="900">DATA CENTER: 2-TIER CLOS / SPINE-LEAF</text>
+    <text x="24" y="56" fill="#94a3b8" class="font-mono" font-size="12.5">Non-blocking ECMP Fabric | East-West 1-Hop Latency</text>
 
     <!-- Spine Layer -->
-    <g transform="translate(40, 75)">
-      <text x="230" y="-12" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="11" font-weight="800">SPINE LAYER (L3 BGP / IS-IS ROUTING FABRIC)</text>
+    <g transform="translate(30, 85)">
+      <text x="240" y="-12" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="13" font-weight="900">SPINE LAYER (L3 BGP / IS-IS ROUTING)</text>
       <!-- Spine 1 -->
-      <rect x="80" y="0" width="120" height="42" rx="5" fill="#17180e" stroke="#f59e0b" stroke-width="1.5"/>
-      <text x="140" y="26" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="11" font-weight="800">SPINE-01</text>
+      <rect x="70" y="0" width="140" height="48" rx="6" fill="#1c190a" stroke="#f59e0b" stroke-width="1.8"/>
+      <text x="140" y="30" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="14" font-weight="900">SPINE-01</text>
 
       <!-- Spine 2 -->
-      <rect x="260" y="0" width="120" height="42" rx="5" fill="#17180e" stroke="#f59e0b" stroke-width="1.5"/>
-      <text x="320" y="26" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="11" font-weight="800">SPINE-02</text>
+      <rect x="270" y="0" width="140" height="48" rx="6" fill="#1c190a" stroke="#f59e0b" stroke-width="1.8"/>
+      <text x="340" y="30" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="14" font-weight="900">SPINE-02</text>
     </g>
 
-    <!-- Full Mesh Interconnect Lines -->
-    <g stroke-width="1.5">
-      <!-- From Spine 1 (140, 117) to Leaves -->
-      <line x1="180" y1="117" x2="80" y2="240" stroke="#10b981" class="topo-flow-1"/>
-      <line x1="180" y1="117" x2="200" y2="240" stroke="#10b981" class="topo-flow-1"/>
-      <line x1="180" y1="117" x2="320" y2="240" stroke="#10b981" class="topo-flow-1"/>
-      <line x1="180" y1="117" x2="440" y2="240" stroke="#10b981" class="topo-flow-1"/>
+    <!-- Mesh Lines -->
+    <g stroke-width="2.5">
+      <line x1="200" y1="133" x2="80" y2="250" stroke="#10b981" class="topo-flow-1"/>
+      <line x1="200" y1="133" x2="200" y2="250" stroke="#10b981" class="topo-flow-1"/>
+      <line x1="200" y1="133" x2="320" y2="250" stroke="#10b981" class="topo-flow-1"/>
+      <line x1="200" y1="133" x2="440" y2="250" stroke="#10b981" class="topo-flow-1"/>
 
-      <!-- From Spine 2 (320, 117) to Leaves -->
-      <line x1="360" y1="117" x2="80" y2="240" stroke="#f59e0b" class="topo-flow-2"/>
-      <line x1="360" y1="117" x2="200" y2="240" stroke="#f59e0b" class="topo-flow-2"/>
-      <line x1="360" y1="117" x2="320" y2="240" stroke="#f59e0b" class="topo-flow-2"/>
-      <line x1="360" y1="117" x2="440" y2="240" stroke="#f59e0b" class="topo-flow-2"/>
+      <line x1="400" y1="133" x2="80" y2="250" stroke="#f59e0b" class="topo-flow-2"/>
+      <line x1="400" y1="133" x2="200" y2="250" stroke="#f59e0b" class="topo-flow-2"/>
+      <line x1="400" y1="133" x2="320" y2="250" stroke="#f59e0b" class="topo-flow-2"/>
+      <line x1="400" y1="133" x2="440" y2="250" stroke="#f59e0b" class="topo-flow-2"/>
     </g>
 
-    <!-- Leaf Layer (ToR Switches) -->
-    <g transform="translate(20, 240)">
-      <text x="250" y="-12" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="11" font-weight="800">LEAF LAYER (VTEP / VXLAN ACCESS)</text>
-      <!-- Leaf 1 -->
-      <rect x="10" y="0" width="100" height="40" rx="4" fill="#0c1e2b" stroke="#0284c7" stroke-width="1.2"/>
-      <text x="60" y="25" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">LEAF-01</text>
-      <!-- Leaf 2 -->
-      <rect x="130" y="0" width="100" height="40" rx="4" fill="#0c1e2b" stroke="#0284c7" stroke-width="1.2"/>
-      <text x="180" y="25" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">LEAF-02</text>
-      <!-- Leaf 3 -->
-      <rect x="250" y="0" width="100" height="40" rx="4" fill="#0c1e2b" stroke="#0284c7" stroke-width="1.2"/>
-      <text x="300" y="25" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">LEAF-03</text>
-      <!-- Leaf 4 -->
-      <rect x="370" y="0" width="100" height="40" rx="4" fill="#0c1e2b" stroke="#0284c7" stroke-width="1.2"/>
-      <text x="420" y="25" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">LEAF-04</text>
+    <!-- Leaf Layer -->
+    <g transform="translate(20, 250)">
+      <text x="250" y="-12" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">LEAF LAYER (VTEP / VXLAN ACCESS)</text>
+      <!-- Leaf 1-4 -->
+      <rect x="10" y="0" width="105" height="46" rx="6" fill="#0d2233" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="62" y="28" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">LEAF-01</text>
+      
+      <rect x="135" y="0" width="105" height="46" rx="6" fill="#0d2233" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="187" y="28" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">LEAF-02</text>
+      
+      <rect x="260" y="0" width="105" height="46" rx="6" fill="#0d2233" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="312" y="28" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">LEAF-03</text>
+      
+      <rect x="385" y="0" width="105" height="46" rx="6" fill="#0d2233" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="437" y="28" text-anchor="middle" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">LEAF-04</text>
     </g>
 
-    <!-- Compute / Bare-Metal Hosts -->
-    <g transform="translate(20, 340)">
-      <text x="250" y="0" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="10.5">COMPUTE &amp; STORAGE CLUSTERS (DUAL-HOMED LACP / EVPN-MH)</text>
-      <!-- Server Box 1 -->
-      <rect x="10" y="15" width="220" height="40" rx="4" fill="#0b131c" stroke="#253545" stroke-width="1"/>
-      <text x="120" y="38" text-anchor="middle" fill="#cbd5e1" class="font-mono" font-size="9.5">KUBERNETES WORKER RACK 01</text>
-      <!-- Server Box 2 -->
-      <rect x="250" y="15" width="220" height="40" rx="4" fill="#0b131c" stroke="#253545" stroke-width="1"/>
-      <text x="360" y="38" text-anchor="middle" fill="#cbd5e1" class="font-mono" font-size="9.5">NVMe-oF / CEPH STORAGE RACK 02</text>
+    <!-- Compute / Servers -->
+    <g transform="translate(20, 360)">
+      <rect x="10" y="0" width="480" height="50" rx="6" fill="#09141f" stroke="#1d3347" stroke-width="1.2"/>
+      <text x="250" y="30" text-anchor="middle" fill="#cbd5e1" class="font-mono" font-size="13" font-weight="700">KUBERNETES &amp; NVMe STORAGE RACKS (LACP / EVPN)</text>
     </g>
 
-    <!-- DC Specs Box -->
-    <g transform="translate(20, 420)">
-      <rect width="500" height="50" rx="4" fill="#080f15" stroke="#162736" stroke-width="1"/>
-      <text x="14" y="20" fill="#10b981" class="font-mono" font-size="10" font-weight="700">FABRIC ATTRIBUTES:</text>
-      <text x="14" y="38" fill="#94a3b8" class="font-mono" font-size="9.5">No Spanning Tree in Core | Equal-Cost Multi-Path (ECMP 64-way) | VXLAN EVPN</text>
+    <!-- Specs Box -->
+    <g transform="translate(20, 435)">
+      <rect width="500" height="55" rx="6" fill="#091b22" stroke="#10b981" stroke-width="1.2"/>
+      <text x="16" y="24" fill="#34d399" class="font-mono" font-size="13" font-weight="900">DC FABRIC METRICS:</text>
+      <text x="16" y="44" fill="#94a3b8" class="font-mono" font-size="12">No Spanning Tree in Core | ECMP 64-way | VXLAN EVPN</text>
     </g>
   </g>
 
-  <!-- Right: Enterprise 3-Tier Hierarchy (North-South Optimized) -->
-  <g transform="translate(620, 80)">
-    <rect width="540" height="490" rx="8" fill="#09121a" stroke="#1b3040" stroke-width="1.2"/>
-    <text x="20" y="30" fill="#38bdf8" class="font-mono" font-size="12.5" font-weight="800">ENTERPRISE: 3-TIER HIERARCHICAL MODEL</text>
-    <text x="20" y="48" fill="#64748b" class="font-mono" font-size="10">Core / Distribution / Access Layers | North-South WAN &amp; Internet Oriented</text>
+  <!-- Right: Enterprise 3-Tier -->
+  <g transform="translate(620, 95)">
+    <rect width="540" height="515" rx="10" fill="#08121a" stroke="#1c3347" stroke-width="1.8"/>
+    <text x="24" y="34" fill="#38bdf8" class="font-mono" font-size="15" font-weight="900">ENTERPRISE: 3-TIER HIERARCHICAL MODEL</text>
+    <text x="24" y="56" fill="#94a3b8" class="font-mono" font-size="12.5">Core / Distribution / Access Layers | North-South WAN Focus</text>
 
-    <!-- Core Layer -->
-    <g transform="translate(40, 75)">
-      <text x="230" y="-12" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="11" font-weight="800">1. CORE LAYER (HIGH-SPEED L3 BACKBONE)</text>
-      <rect x="80" y="0" width="120" height="38" rx="4" fill="#1f1113" stroke="#ef4444" stroke-width="1.2"/>
-      <text x="140" y="24" text-anchor="middle" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="800">CORE-SW-01</text>
-      <rect x="260" y="0" width="120" height="38" rx="4" fill="#1f1113" stroke="#ef4444" stroke-width="1.2"/>
-      <text x="320" y="24" text-anchor="middle" fill="#fca5a5" class="font-mono" font-size="10.5" font-weight="800">CORE-SW-02</text>
+    <!-- Core -->
+    <g transform="translate(30, 85)">
+      <text x="240" y="-12" text-anchor="middle" fill="#ef4444" class="font-mono" font-size="13" font-weight="900">1. CORE LAYER (L3 BACKBONE)</text>
+      <rect x="70" y="0" width="140" height="44" rx="6" fill="#210f13" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="140" y="28" text-anchor="middle" fill="#fca5a5" class="font-mono" font-size="13" font-weight="900">CORE-SW-01</text>
+      
+      <rect x="270" y="0" width="140" height="44" rx="6" fill="#210f13" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="340" y="28" text-anchor="middle" fill="#fca5a5" class="font-mono" font-size="13" font-weight="900">CORE-SW-02</text>
     </g>
 
-    <!-- Distribution Layer -->
-    <g transform="translate(40, 185)">
-      <text x="230" y="-12" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="11" font-weight="800">2. DISTRIBUTION LAYER (POLICY, ACL, ROUTING BOUNDARY)</text>
-      <rect x="80" y="0" width="120" height="38" rx="4" fill="#1b160a" stroke="#f59e0b" stroke-width="1.2"/>
-      <text x="140" y="24" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="10.5" font-weight="800">DIST-SW-01</text>
-      <rect x="260" y="0" width="120" height="38" rx="4" fill="#1b160a" stroke="#f59e0b" stroke-width="1.2"/>
-      <text x="320" y="24" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="10.5" font-weight="800">DIST-SW-02</text>
+    <!-- Distribution -->
+    <g transform="translate(30, 200)">
+      <text x="240" y="-12" text-anchor="middle" fill="#f59e0b" class="font-mono" font-size="13" font-weight="900">2. DISTRIBUTION LAYER (POLICY &amp; ACLS)</text>
+      <rect x="70" y="0" width="140" height="44" rx="6" fill="#1c190a" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="140" y="28" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="13" font-weight="900">DIST-SW-01</text>
+      
+      <rect x="270" y="0" width="140" height="44" rx="6" fill="#1c190a" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="340" y="28" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="13" font-weight="900">DIST-SW-02</text>
     </g>
 
-    <!-- Access Layer -->
-    <g transform="translate(20, 295)">
-      <text x="250" y="-12" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="11" font-weight="800">3. ACCESS LAYER (PORT SECURITY, POE, 802.1X)</text>
-      <rect x="20" y="0" width="120" height="38" rx="4" fill="#0b1b24" stroke="#06b6d4" stroke-width="1.2"/>
-      <text x="80" y="24" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="10" font-weight="800">ACC-SW-01</text>
-      <rect x="180" y="0" width="120" height="38" rx="4" fill="#0b1b24" stroke="#06b6d4" stroke-width="1.2"/>
-      <text x="240" y="24" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="10" font-weight="800">ACC-SW-02</text>
-      <rect x="340" y="0" width="120" height="38" rx="4" fill="#0b1b24" stroke="#06b6d4" stroke-width="1.2"/>
-      <text x="400" y="24" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="10" font-weight="800">ACC-SW-03</text>
+    <!-- Access -->
+    <g transform="translate(20, 315)">
+      <text x="250" y="-12" text-anchor="middle" fill="#06b6d4" class="font-mono" font-size="13" font-weight="900">3. ACCESS LAYER (POE+, 802.1X, WI-FI 7)</text>
+      <rect x="20" y="0" width="140" height="44" rx="6" fill="#0c2230" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="90" y="28" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="13" font-weight="900">ACC-SW-01</text>
+      
+      <rect x="180" y="0" width="140" height="44" rx="6" fill="#0c2230" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="250" y="28" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="13" font-weight="900">ACC-SW-02</text>
+      
+      <rect x="340" y="0" width="140" height="44" rx="6" fill="#0c2230" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="410" y="28" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="13" font-weight="900">ACC-SW-03</text>
     </g>
 
-    <!-- End User Endpoints / APs -->
-    <g transform="translate(20, 360)">
-      <rect width="500" height="40" rx="4" fill="#0a121a" stroke="#1d2e3e" stroke-width="1"/>
-      <text x="250" y="25" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="10">Wi-Fi 7 APs | IP Phones (VoIP VLAN) | Workstations (Data VLAN)</text>
-    </g>
-
-    <!-- Enterprise Specs Box -->
-    <g transform="translate(20, 420)">
-      <rect width="500" height="50" rx="4" fill="#080f15" stroke="#162736" stroke-width="1"/>
-      <text x="14" y="20" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">ENTERPRISE PROTOCOLS:</text>
-      <text x="14" y="38" fill="#94a3b8" class="font-mono" font-size="9.5">RSTP / MSTP Loop Prevention | HSRP / VRRP First-Hop Gateway | 802.1Q Trunks</text>
+    <!-- Specs Box -->
+    <g transform="translate(20, 435)">
+      <rect width="500" height="55" rx="6" fill="#0c2033" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="16" y="24" fill="#38bdf8" class="font-mono" font-size="13" font-weight="900">ENTERPRISE PROTOCOLS:</text>
+      <text x="16" y="44" fill="#94a3b8" class="font-mono" font-size="12">RSTP / MSTP Loop Prevention | HSRP/VRRP Gateway | 802.1Q</text>
     </g>
   </g>
 </svg>

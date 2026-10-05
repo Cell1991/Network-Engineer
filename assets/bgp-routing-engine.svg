@@ -1,152 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="100%" height="100%">
   <defs>
     <linearGradient id="bgpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06090d"/>
-      <stop offset="100%" stop-color="#0d151f"/>
+      <stop offset="100%" stop-color="#0c1520"/>
     </linearGradient>
-    <pattern id="bgpGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#13202c" stroke-width="0.6"/>
+    <pattern id="bgpGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#132333" stroke-width="0.8"/>
     </pattern>
-    <linearGradient id="stepGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#059669"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
-    <linearGradient id="stepAmber" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d97706"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
-    </linearGradient>
   </defs>
 
   <style>
     .font-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    @keyframes pulseStep {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.02); opacity: 1; }
-    }
   </style>
 
-  <rect width="1200" height="620" fill="url(#bgpGrad)" rx="10" stroke="#1e2e3d" stroke-width="1.5"/>
-  <rect width="1200" height="620" fill="url(#bgpGrid)" rx="10"/>
+  <rect width="1200" height="660" fill="url(#bgpGrad)" rx="12" stroke="#1d3347" stroke-width="2"/>
+  <rect width="1200" height="660" fill="url(#bgpGrid)" rx="12"/>
 
   <!-- Header -->
-  <g transform="translate(40, 36)">
-    <text fill="#f59e0b" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.5">[ RFC 4271 // BGP-4 PATH VECTOR DECISION ALGORITHM ]</text>
-    <text y="24" fill="#ffffff" class="font-mono" font-size="20" font-weight="900">BGP-4 BEST PATH SELECTION ENGINE PIPELINE</text>
+  <g transform="translate(40, 42)">
+    <text fill="#f59e0b" class="font-mono" font-size="15" font-weight="800" letter-spacing="2">[ RFC 4271 BGP-4 PATH VECTOR ALGORITHM ]</text>
+    <text y="30" fill="#ffffff" class="font-mono" font-size="26" font-weight="900">BGP-4 BEST PATH SELECTION ENGINE</text>
   </g>
 
-  <!-- Flowchart Decision Pipeline (Left Column: Steps 1 to 5) -->
-  <g transform="translate(40, 80)">
-    <rect width="530" height="500" rx="8" fill="#081018" stroke="#182c3c" stroke-width="1.2"/>
-    <text x="20" y="30" fill="#38bdf8" class="font-mono" font-size="12" font-weight="800">PATH ATTRIBUTE FILTERING (STEPS 1 - 5)</text>
+  <!-- Left Column: Steps 1 to 5 -->
+  <g transform="translate(40, 95)">
+    <rect width="540" height="535" rx="10" fill="#08121a" stroke="#1c3347" stroke-width="1.8"/>
+    <text x="24" y="34" fill="#38bdf8" class="font-mono" font-size="15" font-weight="900">PATH ATTRIBUTES (STEPS 1 - 5)</text>
 
     <!-- Step 1: Weight -->
-    <g transform="translate(20, 50)">
-      <rect width="490" height="72" rx="6" fill="#0b1723" stroke="#10b981" stroke-width="1.2"/>
-      <rect width="40" height="72" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="20" y="42" text-anchor="middle" fill="#34d399" class="font-mono" font-size="15" font-weight="900">01</text>
-      <text x="56" y="28" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">WEIGHT (HIGHEST WINS)</text>
-      <text x="56" y="48" fill="#94a3b8" class="font-sans" font-size="11">Cisco-proprietary local attribute (0 - 65535). Not propagated to peers.</text>
-      <text x="56" y="64" fill="#38bdf8" class="font-mono" font-size="10">Default: 32768 for locally originated, 0 for learned</text>
+    <g transform="translate(20, 52)">
+      <rect width="500" height="78" rx="8" fill="#0b1723" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="50" height="78" rx="8" fill="#10b981" fill-opacity="0.25"/>
+      <text x="25" y="46" text-anchor="middle" fill="#34d399" class="font-mono" font-size="18" font-weight="900">01</text>
+      <text x="66" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">WEIGHT (HIGHEST WINS)</text>
+      <text x="66" y="55" fill="#94a3b8" class="font-sans" font-size="13.5">Cisco local attribute (0 - 65535). Not sent to peers.</text>
+      <text x="66" y="70" fill="#38bdf8" class="font-mono" font-size="12">Default: 32768 for local, 0 for learned</text>
     </g>
 
     <!-- Step 2: Local Preference -->
-    <g transform="translate(20, 134)">
-      <rect width="490" height="72" rx="6" fill="#0b1723" stroke="#10b981" stroke-width="1.2"/>
-      <rect width="40" height="72" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="20" y="42" text-anchor="middle" fill="#34d399" class="font-mono" font-size="15" font-weight="900">02</text>
-      <text x="56" y="28" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">LOCAL PREFERENCE (HIGHEST WINS)</text>
-      <text x="56" y="48" fill="#94a3b8" class="font-sans" font-size="11">Well-known discretionary. Propagated throughout entire iBGP AS.</text>
-      <text x="56" y="64" fill="#38bdf8" class="font-mono" font-size="10">Default: 100 | Used to influence outbound traffic exit points</text>
+    <g transform="translate(20, 142)">
+      <rect width="500" height="78" rx="8" fill="#0b1723" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="50" height="78" rx="8" fill="#10b981" fill-opacity="0.25"/>
+      <text x="25" y="46" text-anchor="middle" fill="#34d399" class="font-mono" font-size="18" font-weight="900">02</text>
+      <text x="66" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">LOCAL PREFERENCE (HIGHEST WINS)</text>
+      <text x="66" y="55" fill="#94a3b8" class="font-sans" font-size="13.5">Propagated throughout entire iBGP AS.</text>
+      <text x="66" y="70" fill="#38bdf8" class="font-mono" font-size="12">Default: 100 | Influences outbound traffic</text>
     </g>
 
     <!-- Step 3: Locally Originated -->
-    <g transform="translate(20, 218)">
-      <rect width="490" height="72" rx="6" fill="#0b1723" stroke="#10b981" stroke-width="1.2"/>
-      <rect width="40" height="72" rx="6" fill="#10b981" fill-opacity="0.2"/>
-      <text x="20" y="42" text-anchor="middle" fill="#34d399" class="font-mono" font-size="15" font-weight="900">03</text>
-      <text x="56" y="28" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">LOCALLY ORIGINATED (PREFER LOCAL)</text>
-      <text x="56" y="48" fill="#94a3b8" class="font-sans" font-size="11">Routes injected via `network` or `aggregate-address` over `redistribute`.</text>
-      <text x="56" y="64" fill="#38bdf8" class="font-mono" font-size="10">Preference: `default-originate` &gt; `network` &gt; `redistribute`</text>
+    <g transform="translate(20, 232)">
+      <rect width="500" height="78" rx="8" fill="#0b1723" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="50" height="78" rx="8" fill="#10b981" fill-opacity="0.25"/>
+      <text x="25" y="46" text-anchor="middle" fill="#34d399" class="font-mono" font-size="18" font-weight="900">03</text>
+      <text x="66" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">LOCALLY ORIGINATED (PREFER LOCAL)</text>
+      <text x="66" y="55" fill="#94a3b8" class="font-sans" font-size="13.5">Routes injected via `network` over `redistribute`.</text>
+      <text x="66" y="70" fill="#38bdf8" class="font-mono" font-size="12">Order: default &gt; network &gt; redistribute</text>
     </g>
 
     <!-- Step 4: AS-Path -->
-    <g transform="translate(20, 302)">
-      <rect width="490" height="72" rx="6" fill="#0b1723" stroke="#f59e0b" stroke-width="1.2"/>
-      <rect width="40" height="72" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-      <text x="20" y="42" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="15" font-weight="900">04</text>
-      <text x="56" y="28" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">AS-PATH LENGTH (SHORTEST WINS)</text>
-      <text x="56" y="48" fill="#94a3b8" class="font-sans" font-size="11">Well-known mandatory. AS-SET counts as 1. AS_CONFED ignored.</text>
-      <text x="56" y="64" fill="#fbbf24" class="font-mono" font-size="10">Engineering tactic: AS-Path Prepending used to shape inbound traffic</text>
+    <g transform="translate(20, 322)">
+      <rect width="500" height="78" rx="8" fill="#0b1723" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect width="50" height="78" rx="8" fill="#f59e0b" fill-opacity="0.25"/>
+      <text x="25" y="46" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="18" font-weight="900">04</text>
+      <text x="66" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">AS-PATH LENGTH (SHORTEST WINS)</text>
+      <text x="66" y="55" fill="#94a3b8" class="font-sans" font-size="13.5">Well-known mandatory. AS-SET counts as 1.</text>
+      <text x="66" y="70" fill="#fbbf24" class="font-mono" font-size="12">Used for BGP AS-Path Prepending</text>
     </g>
 
     <!-- Step 5: Origin Code -->
-    <g transform="translate(20, 386)">
-      <rect width="490" height="72" rx="6" fill="#0b1723" stroke="#f59e0b" stroke-width="1.2"/>
-      <rect width="40" height="72" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-      <text x="20" y="42" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="15" font-weight="900">05</text>
-      <text x="56" y="28" fill="#ffffff" class="font-mono" font-size="13" font-weight="800">ORIGIN TYPE (IGP &lt; EGP &lt; INCOMPLETE)</text>
-      <text x="56" y="48" fill="#94a3b8" class="font-sans" font-size="11">Preference order: IGP (i) &gt; EGP (e) &gt; Incomplete (? via redistribution).</text>
-      <text x="56" y="64" fill="#fbbf24" class="font-mono" font-size="10">RFC rule: Well-known mandatory attribute</text>
+    <g transform="translate(20, 412)">
+      <rect width="500" height="78" rx="8" fill="#0b1723" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect width="50" height="78" rx="8" fill="#f59e0b" fill-opacity="0.25"/>
+      <text x="25" y="46" text-anchor="middle" fill="#fbbf24" class="font-mono" font-size="18" font-weight="900">05</text>
+      <text x="66" y="32" fill="#ffffff" class="font-mono" font-size="16" font-weight="900">ORIGIN CODE (IGP &lt; EGP &lt; INCOMPLETE)</text>
+      <text x="66" y="55" fill="#94a3b8" class="font-sans" font-size="13.5">Preference order: IGP (i) &gt; EGP (e) &gt; Incomplete (?).</text>
+      <text x="66" y="70" fill="#fbbf24" class="font-mono" font-size="12">RFC 4271 mandatory attribute</text>
     </g>
   </g>
 
-  <!-- Right Column: Steps 6 to 10 & Peering Summary -->
-  <g transform="translate(610, 80)">
-    <rect width="550" height="500" rx="8" fill="#081018" stroke="#182c3c" stroke-width="1.2"/>
-    <text x="20" y="30" fill="#38bdf8" class="font-mono" font-size="12" font-weight="800">TIEBREAKERS &amp; NEIGHBOR EVALUATION (STEPS 6 - 10)</text>
+  <!-- Right Column: Steps 6 to 10 -->
+  <g transform="translate(610, 95)">
+    <rect width="550" height="535" rx="10" fill="#08121a" stroke="#1c3347" stroke-width="1.8"/>
+    <text x="24" y="34" fill="#38bdf8" class="font-mono" font-size="15" font-weight="900">TIEBREAKERS (STEPS 6 - 10)</text>
 
     <!-- Step 6: MED -->
-    <g transform="translate(20, 50)">
-      <rect width="510" height="60" rx="6" fill="#0b1723" stroke="#06b6d4" stroke-width="1"/>
-      <rect width="36" height="60" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
-      <text x="18" y="36" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="14" font-weight="900">06</text>
-      <text x="50" y="26" fill="#ffffff" class="font-mono" font-size="12.5" font-weight="800">MED / MULTI-EXIT DISCRIMINATOR (LOWEST WINS)</text>
-      <text x="50" y="46" fill="#94a3b8" class="font-sans" font-size="10.5">Optional non-transitive. Compared only between same neighbor AS routes.</text>
+    <g transform="translate(20, 52)">
+      <rect width="510" height="66" rx="8" fill="#0b1723" stroke="#06b6d4" stroke-width="1.5"/>
+      <rect width="45" height="66" rx="8" fill="#06b6d4" fill-opacity="0.25"/>
+      <text x="22" y="40" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="17" font-weight="900">06</text>
+      <text x="60" y="30" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">MED / METRIC (LOWEST WINS)</text>
+      <text x="60" y="50" fill="#94a3b8" class="font-sans" font-size="13">Compared between routes from same neighbor AS.</text>
     </g>
 
     <!-- Step 7: eBGP over iBGP -->
-    <g transform="translate(20, 120)">
-      <rect width="510" height="60" rx="6" fill="#0b1723" stroke="#06b6d4" stroke-width="1"/>
-      <rect width="36" height="60" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
-      <text x="18" y="36" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="14" font-weight="900">07</text>
-      <text x="50" y="26" fill="#ffffff" class="font-mono" font-size="12.5" font-weight="800">PEERING TYPE (PREFER eBGP OVER iBGP)</text>
-      <text x="50" y="46" fill="#94a3b8" class="font-sans" font-size="10.5">External eBGP neighbor route preferred over internal iBGP or confed.</text>
+    <g transform="translate(20, 128)">
+      <rect width="510" height="66" rx="8" fill="#0b1723" stroke="#06b6d4" stroke-width="1.5"/>
+      <rect width="45" height="66" rx="8" fill="#06b6d4" fill-opacity="0.25"/>
+      <text x="22" y="40" text-anchor="middle" fill="#67e8f9" class="font-mono" font-size="17" font-weight="900">07</text>
+      <text x="60" y="30" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">PEERING TYPE (PREFER eBGP OVER iBGP)</text>
+      <text x="60" y="50" fill="#94a3b8" class="font-sans" font-size="13">External eBGP route preferred over internal iBGP.</text>
     </g>
 
     <!-- Step 8: IGP Metric to Next-Hop -->
-    <g transform="translate(20, 190)">
-      <rect width="510" height="60" rx="6" fill="#0b1723" stroke="#3b82f6" stroke-width="1"/>
-      <rect width="36" height="60" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
-      <text x="18" y="36" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="14" font-weight="900">08</text>
-      <text x="50" y="26" fill="#ffffff" class="font-mono" font-size="12.5" font-weight="800">IGP METRIC TO BGP NEXT-HOP (LOWEST WINS)</text>
-      <text x="50" y="46" fill="#94a3b8" class="font-sans" font-size="10.5">Hot-potato routing: eject traffic via closest internal exit gateway.</text>
+    <g transform="translate(20, 204)">
+      <rect width="510" height="66" rx="8" fill="#0b1723" stroke="#3b82f6" stroke-width="1.5"/>
+      <rect width="45" height="66" rx="8" fill="#3b82f6" fill-opacity="0.25"/>
+      <text x="22" y="40" text-anchor="middle" fill="#93c5fd" class="font-mono" font-size="17" font-weight="900">08</text>
+      <text x="60" y="30" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">IGP METRIC TO BGP NEXT-HOP (LOWEST WINS)</text>
+      <text x="60" y="50" fill="#94a3b8" class="font-sans" font-size="13">Hot-potato routing to closest exit gateway.</text>
     </g>
 
-    <!-- Step 9: Multipath / Oldest eBGP Route -->
-    <g transform="translate(20, 260)">
-      <rect width="510" height="60" rx="6" fill="#0b1723" stroke="#8b5cf6" stroke-width="1"/>
-      <rect width="36" height="60" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
-      <text x="18" y="36" text-anchor="middle" fill="#c4b5fd" class="font-mono" font-size="14" font-weight="900">09</text>
-      <text x="50" y="26" fill="#ffffff" class="font-mono" font-size="12.5" font-weight="800">OLDEST eBGP ROUTE (MINIMIZES FLAPPING)</text>
-      <text x="50" y="46" fill="#94a3b8" class="font-sans" font-size="10.5">If `maximum-paths` configured, load-balances across parallel paths.</text>
+    <!-- Step 9: Oldest eBGP Route -->
+    <g transform="translate(20, 280)">
+      <rect width="510" height="66" rx="8" fill="#0b1723" stroke="#8b5cf6" stroke-width="1.5"/>
+      <rect width="45" height="66" rx="8" fill="#8b5cf6" fill-opacity="0.25"/>
+      <text x="22" y="40" text-anchor="middle" fill="#c4b5fd" class="font-mono" font-size="17" font-weight="900">09</text>
+      <text x="60" y="30" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">OLDEST eBGP ROUTE (MINIMIZES FLAPPING)</text>
+      <text x="60" y="50" fill="#94a3b8" class="font-sans" font-size="13">Prefers longer established stable routes.</text>
     </g>
 
-    <!-- Step 10: Router ID & Neighbor IP -->
-    <g transform="translate(20, 330)">
-      <rect width="510" height="60" rx="6" fill="#0b1723" stroke="#ec4899" stroke-width="1"/>
-      <rect width="36" height="60" rx="6" fill="#ec4899" fill-opacity="0.2"/>
-      <text x="18" y="36" text-anchor="middle" fill="#f472b6" class="font-mono" font-size="14" font-weight="900">10</text>
-      <text x="50" y="26" fill="#ffffff" class="font-mono" font-size="12.5" font-weight="800">ROUTER ID &amp; PEER IP (LOWEST BGP RID WINS)</text>
-      <text x="50" y="46" fill="#94a3b8" class="font-sans" font-size="10.5">Final deterministic tiebreaker: lowest BGP Router ID, then lowest peer IP.</text>
+    <!-- Step 10: Router ID -->
+    <g transform="translate(20, 356)">
+      <rect width="510" height="66" rx="8" fill="#0b1723" stroke="#ec4899" stroke-width="1.5"/>
+      <rect width="45" height="66" rx="8" fill="#ec4899" fill-opacity="0.25"/>
+      <text x="22" y="40" text-anchor="middle" fill="#f472b6" class="font-mono" font-size="17" font-weight="900">10</text>
+      <text x="60" y="30" fill="#ffffff" class="font-mono" font-size="15" font-weight="900">ROUTER ID (LOWEST BGP RID WINS)</text>
+      <text x="60" y="50" fill="#94a3b8" class="font-sans" font-size="13">Final deterministic tiebreaker: lowest RID then IP.</text>
     </g>
 
-    <!-- Code Verification Note -->
-    <g transform="translate(20, 405)">
-      <rect width="510" height="70" rx="6" fill="#0a191f" stroke="#10b981" stroke-width="1"/>
-      <text x="16" y="26" fill="#34d399" class="font-mono" font-size="11" font-weight="800">ENGINE VALIDATION IN REPO:</text>
-      <text x="16" y="46" fill="#cbd5e1" class="font-mono" font-size="10">Implemented in `src/routing/bgp_engine.py`</text>
-      <text x="16" y="60" fill="#94a3b8" class="font-mono" font-size="10">Verified with full PyTest permutation test suite</text>
+    <!-- Repo Engine Badge -->
+    <g transform="translate(20, 440)">
+      <rect width="510" height="68" rx="8" fill="#091b22" stroke="#10b981" stroke-width="1.5"/>
+      <text x="20" y="28" fill="#34d399" class="font-mono" font-size="14" font-weight="900">ENGINE IN REPO: `src/routing/bgp_engine.py`</text>
+      <text x="20" y="50" fill="#cbd5e1" class="font-mono" font-size="13">Validated via PyTest Decision Permutations</text>
     </g>
   </g>
 </svg>
