@@ -40,8 +40,8 @@
       <img src="https://img.shields.io/badge/01_TAXONOMY-Curriculum_Matrix-059669?style=flat-square" alt="Taxonomy Matrix" />
     </a>
     &nbsp;
-    <a href="#02-bento-grid-feature-highlights">
-      <img src="https://img.shields.io/badge/02_BENTO_GRID-Engineering_Pillars-d97706?style=flat-square" alt="Bento Grid" />
+    <a href="#02-system-capabilities--engineering-pillars">
+      <img src="https://img.shields.io/badge/02_PILLARS-System_Capabilities-d97706?style=flat-square" alt="System Capabilities" />
     </a>
     &nbsp;
     <a href="#03-osi-7-layer-vs-tcpip-model">
@@ -111,14 +111,14 @@
 ---
 
 <!-- ========================================================================================= -->
-<!--                    02. BENTO MATRIX & ENGINEERING PILLARS                                 -->
+<!--                    02. SYSTEM CAPABILITIES & ENGINEERING PILLARS                          -->
 <!-- ========================================================================================= -->
 
-<img src="./assets/sec_02.svg" width="100%" alt="02 // Bento Grid Feature Highlights" id="02-bento-grid-feature-highlights" />
+<img src="./assets/sec_02.svg" width="100%" alt="02 // System Capabilities &amp; Engineering Pillars" id="02-system-capabilities--engineering-pillars" />
 
 <div align="center">
   <br/>
-  <img src="./assets/bento-grid-features.svg" alt="Bento Grid Feature Highlights" width="100%" />
+  <img src="./assets/system-capabilities-matrix.svg" alt="System Capabilities &amp; Architecture Pillars" width="100%" />
 </div>
 
 <br/>
@@ -267,13 +267,13 @@
 ```
 Network-Engineer/
 ├── assets/                                      # Vector Artworks & Animated Telemetry Diagrams
-│   ├── bento-grid-features.svg                  # High-Tech Bento Grid Architecture Showcase
 │   ├── bgp-routing-engine.svg                   # BGP-4 Best Path Decision Engine Pipeline
 │   ├── hero-banner.svg                          # Main Animated NOC Telemetry Banner
 │   ├── network-topology-matrix.svg              # Spine-Leaf vs 3-Tier Campus Topology Matrix
 │   ├── osi-vs-tcpip-model.svg                   # OSI 7-Layer vs TCP/IP 4-Layer Comparison
 │   ├── packet-flow-animation.svg                # Animated Encapsulation & Transmission Path
 │   ├── sec_01.svg ... sec_08.svg                # Section Divider Tactical SVG Banners
+│   ├── system-capabilities-matrix.svg           # System Architecture & Capability Showcase
 │   └── tcp-handshake-state.svg                  # TCP 3-Way Handshake & State Transition Diagram
 ├── docs/                                        # 13 Exhaustive Technical Curriculum Tracks
 │   ├── 01_physical_and_transmission.md          # Optics, SFP/QSFP, Fiber Dispersion & PHYs

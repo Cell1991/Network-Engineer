@@ -14,6 +14,6 @@
   <rect x="0" y="0" width="12" height="110" fill="url(#secGrad2)" rx="6"/>
   <g transform="translate(40, 68)">
     <text fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="900" letter-spacing="2">[02]</text>
-    <text x="80" y="0" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="900" letter-spacing="1">BENTO MATRIX &amp; ENGINEERING PILLARS</text>
+    <text x="80" y="0" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="900" letter-spacing="1">SYSTEM CAPABILITIES &amp; ENGINEERING PILLARS</text>
   </g>
 </svg>

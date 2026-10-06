@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="100%">
   <defs>
-    <linearGradient id="bentoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="cardBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06090d"/>
       <stop offset="100%" stop-color="#0c141d"/>
     </linearGradient>
-    <pattern id="bentoGridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+    <pattern id="cardGridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#132333" stroke-width="0.8"/>
     </pattern>
   </defs>
@@ -14,10 +14,10 @@
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
   </style>
 
-  <rect width="1200" height="640" fill="url(#bentoBgGrad)" rx="10" stroke="#1d3347" stroke-width="2"/>
-  <rect width="1200" height="640" fill="url(#bentoGridPattern)" rx="10"/>
+  <rect width="1200" height="640" fill="url(#cardBgGrad)" rx="10" stroke="#1d3347" stroke-width="2"/>
+  <rect width="1200" height="640" fill="url(#cardGridPattern)" rx="10"/>
 
-  <!-- Bento Grid Cards (3 cols x 2 rows) -->
+  <!-- System Capability Cards (3 cols x 2 rows) -->
   <g transform="translate(30, 30)">
     <!-- Card 1: Subnetting & CIDR Math Engine -->
     <g transform="translate(0, 0)">
